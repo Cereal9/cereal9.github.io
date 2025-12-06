@@ -14,6 +14,20 @@ ul {
   justify-content: right;
 }
 
+ul li:first-child {
+  margin-right: auto;
+}
+
+ul li:first-child a {
+  padding: 3px 16px;
+}
+
+.logo-img {
+  height: 40px;
+  width: auto;
+  display: block;
+}
+
 ul li a {
   display: block;
   color: white;
@@ -102,3 +116,4 @@ ul li a.active {
 .footer ul li:hover {
   background-color: transparent;
 }
+
