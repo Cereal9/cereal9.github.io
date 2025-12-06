@@ -21,8 +21,12 @@ ul li a {
   text-decoration: none;
 }
 
-ul li a:hover {
+ul li a:hover:not(.active) {
   background-color: #111111;
+}
+
+ul li a.active {
+  background-color: #04AA6D;
 }
 
 .intro {
@@ -77,6 +81,10 @@ ul li a:hover {
   font-size: 16px;
 }
 
+.hours h3 {
+  text-decoration: underline;
+}
+
 .footer ul {
   background-color: transparent;
   flex-direction: column;
@@ -93,17 +101,4 @@ ul li a:hover {
 
 .footer ul li:hover {
   background-color: transparent;
-}
-
-/* Nav active state */
-ul li a.active {
-  background-color: #111111;
-  color: #ffffff;
-  transition: background-color 150ms ease;
-}
-
-/* Optional: make active state more visible on small screens */
-@media (max-width: 600px) {
-  ul { flex-direction: column; }
-  ul li a.active { padding-left: 12px; }
 }
