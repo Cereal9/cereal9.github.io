@@ -13,7 +13,8 @@
 
 <body>
     <ul>
-        <li><a href="index.html"><img src="Pictures/Agricultural Harmony Logo Design.png" alt="Logo"class="logo-img"></a></li>
+        <li><a href="index.html"><img src="Pictures/Agricultural Harmony Logo Design.png" alt="Logo"
+                    class="logo-img"></a></li>
         <li><a href="index.html">Home</a></li>
         <li><a href="about.html">About</a></li>
         <li><a href="services.html">Services</a></li>
@@ -21,23 +22,34 @@
         <li><a class="active" href="contact.html">Contact</a></li>
     </ul>
 
-    
+
     <section class="contact-section">
         <div class="contact-container">
             <h1>Contact Us</h1>
             <p>Have a question or want a free estimate? Use the form below and we'll get back to you shortly.</p>
 
-            <form action="https://formspree.io/f/mjknoqep" method="POST">
-                <label>
-                    Your email:
-                    <input type="email" name="email" required>
-                </label>
-                <label>
-                    Your message:
-                    <textarea name="message" required></textarea>
-                </label>
-                <button type="submit">Send</button>
+            <form action="https://formspree.io/f/{FORM_ID}" class="fs-form" target="_top" method="POST">
+                <div class="fs-field">
+                    <label class="fs-label" for="name">Name:</label>
+                    <input class="fs-input" id="name" name="name" required />
+                </div>
+                <div class="fs-field">
+                    <label class="fs-label" for="email">Email Address:</label>
+                    <input class="fs-input" id="email" name="email" required />
+                </div>
+                <div class="fs-field">
+                    <label class="fs-label" for="number">Phone Number:</label>
+                    <input class="fs-input" id="number" name="number" />
+                </div>
+                <div class="fs-field">
+                    <label class="fs-label" for="message">Inquiry Message:</label>
+                    <textarea class="fs-textarea" id="message" name="message" required></textarea>
+                </div>
+                <div class="fs-button-group">
+                    <button class="fs-button" type="submit">Submit</button>
+                </div>
             </form>
+
 
             <p class="alt-contact">Or call us at <strong>000-000-0000</strong></p>
         </div>
