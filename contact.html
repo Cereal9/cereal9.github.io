@@ -6,19 +6,42 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="contact.css">
     <link rel="icon" type="image/x-icon" href="Pictures/Agricultural Harmony Logo Design.png">
 </head>
 </head>
 
 <body>
     <ul>
-        <li><a href="index.html">Logo</a></li>
+        <li><a href="index.html"><img src="Pictures/Agricultural Harmony Logo Design.png" alt="Logo"class="logo-img"></a></li>
         <li><a href="index.html">Home</a></li>
         <li><a href="about.html">About</a></li>
         <li><a href="services.html">Services</a></li>
         <li><a href="gallery.html">Gallery</a></li>
         <li><a class="active" href="contact.html">Contact</a></li>
     </ul>
+
+    
+    <section class="contact-section">
+        <div class="contact-container">
+            <h1>Contact Us</h1>
+            <p>Have a question or want a free estimate? Use the form below and we'll get back to you shortly.</p>
+
+            <form action="https://formspree.io/f/mjknoqep" method="POST">
+                <label>
+                    Your email:
+                    <input type="email" name="email" required>
+                </label>
+                <label>
+                    Your message:
+                    <textarea name="message" required></textarea>
+                </label>
+                <button type="submit">Send</button>
+            </form>
+
+            <p class="alt-contact">Or call us at <strong>000-000-0000</strong></p>
+        </div>
+    </section>
 
     <div class="footer">
         <div>Real-Fresh Landscaping LLC.<br> Follow us on social media</div>

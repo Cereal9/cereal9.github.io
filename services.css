@@ -1,0 +1,70 @@
+/* Styles for the Services section */
+.services-section {
+  max-width: 1000px;
+  margin: 32px auto;
+  padding: 28px 20px;
+  background: #faf6f1;
+  border-radius: 8px;
+  box-shadow: 0 1px 6px rgba(0,0,0,.25);
+}
+
+.services-section h2 {
+  margin-top: 0;
+  margin-bottom: 12px;
+  text-align: left;
+  color: #20323a;
+}
+
+.services-section p {
+  color: #333;
+  line-height: 1.45;
+}
+
+.services-list {
+  list-style: none;
+  margin: 18px 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px 24px;
+  background-color: #faf6f1;
+}
+
+.services-list li {
+  background: #fff;
+  padding: 12px 14px;
+  border-radius: 6px;
+  border-left: 4px solid #04AA6D;
+}
+
+.services-list li strong {
+  display: block;
+  margin-bottom: 6px;
+  color: #123e3a;
+}
+
+.services-list li p {
+  margin: 0;
+  color: #444;
+  font-size: 14px;
+}
+
+.cta {
+  margin-top: 18px;
+  font-weight: 600;
+}
+
+.cta a {
+  color: #04AA6D;
+  text-decoration: none;
+}
+
+@media (max-width: 700px) {
+  .services-list {
+    grid-template-columns: 1fr;
+  }
+  .services-section {
+    margin: 18px 12px;
+    padding: 16px;
+  }
+}

@@ -15,6 +15,29 @@ img {
 /* Position the image container (needed to position the left and right arrows) */
 .container {
   position: relative;
+  /* limit overall slideshow width and center it */
+  max-width: 900px;
+  margin: 20px auto;
+  padding: 0 10px;
+}
+
+/* Constrain slideshow images so they don't make the slideshow too large */
+.container img {
+  width: 100%;
+  height: auto;
+  max-height: 500px;
+  object-fit: cover;
+}
+
+/* Smaller limits on narrow screens */
+@media only screen and (max-width: 700px) {
+  .container {
+    max-width: 100%;
+    padding: 0 6px;
+  }
+  .container img {
+    max-height: 350px;
+  }
 }
 
 /* Hide the images by default */
@@ -142,4 +165,8 @@ div.desc {
   content: "";
   display: table;
   clear: both;
+}
+.breaker {
+    clear: both;
+    height: 0;
 }
