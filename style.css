@@ -1,0 +1,109 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  padding-bottom: 200px;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  background-color: #283739;
+  display: flex;
+  justify-content: right;
+}
+
+ul li a {
+  display: block;
+  color: white;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+ul li a:hover {
+  background-color: #111111;
+}
+
+.intro {
+  padding: 20px;
+  text-align: left;
+}
+
+.introbox {
+  border: 2px solid #283739;
+  padding: 20px;
+  margin: 20px;
+  border-radius: 20px;
+}
+
+.test{
+    background-color: white;
+    text-align: center;
+}
+
+.panelcontainer{
+    display: flex;
+}
+.box{
+    flex: 1;
+    border: 2px solid #283739;
+    margin: 10px;
+    padding: 10px;
+    border-radius: 8px;
+}
+
+.secondpanel{
+    background-color: #f2f2f2;
+    padding: 20px;
+    text-align: center;
+}
+
+.footer {
+  background-color: #283739;
+  color: white;
+  text-align: left;
+  padding: 10px;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: space-between;
+  box-sizing: border-box;
+}
+.footer h3 {
+  margin: 0 0 10px 0;
+  font-size: 16px;
+}
+
+.footer ul {
+  background-color: transparent;
+  flex-direction: column;
+  padding: 0;
+  margin: 0;
+}
+
+.footer ul li {
+  display: block;
+  color: white;
+  padding: 5px 0;
+  text-decoration: none;
+}
+
+.footer ul li:hover {
+  background-color: transparent;
+}
+
+/* Nav active state */
+ul li a.active {
+  background-color: #111111;
+  color: #ffffff;
+  transition: background-color 150ms ease;
+}
+
+/* Optional: make active state more visible on small screens */
+@media (max-width: 600px) {
+  ul { flex-direction: column; }
+  ul li a.active { padding-left: 12px; }
+}
