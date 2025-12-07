@@ -12,6 +12,7 @@ ul {
   background-color: #283739;
   display: flex;
   justify-content: right;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
 }
 
 ul li:first-child {
@@ -200,12 +201,15 @@ ul li a.active {
   display: grid;
   gap: 8px;
   width: max-content;
+  max-width: 100%;
   justify-items: start;
   background-color: transparent;
+  box-shadow: none;
+
 }
 .benefits li {
   position: relative;
-  padding: 8px 12px 8px 34px;
+  padding: 8px 12px;
   color: white;
   background: #20323a;
   border-radius: 6px;
@@ -214,13 +218,10 @@ ul li a.active {
 }
 
 .benefits li::before {
-  content: "✔";
   position: absolute;
   left: 10px;
   top: 50%;
   transform: translateY(-50%);
-  color: #04AA6D;
-  font-weight: 700;
 }
 
 
@@ -252,6 +253,30 @@ ul li a.active {
 @media (max-width: 900px) {
   .secondpanel-inner { flex-direction: column; }
   .second-image img { height: 180px; }
+}
+
+@media (max-width: 700px) {
+  .panelcontainer {
+    flex-direction: column;
+    padding: 16px 12px;
+  }
+
+  .box {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 16px;
+  }
+
+  .benefits {
+    width: max-content;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .btn-primary {
+    display: block;
+    text-align: center;
+  }
 }
 
 .footer {
