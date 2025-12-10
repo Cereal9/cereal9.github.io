@@ -28,6 +28,7 @@
   grid-template-columns: 1fr 1fr;
   gap: 14px 24px;
   background-color: #faf6f1;
+  box-shadow: none;
 }
 
 .services-list li {
