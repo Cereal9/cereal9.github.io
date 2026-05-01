@@ -1,83 +1,108 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Contact | Real-Fresh Landscaping</title>
+    <meta name="description" content="Contact Real-Fresh Landscaping for a free estimate. Serving the Greater Joliet area. Call 815-212-4526 or submit the form online.">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="contact.css">
     <link rel="icon" type="image/x-icon" href="Pictures/Agricultural Harmony Logo Design.png">
 </head>
-</head>
-
 <body>
-    <ul>
-        <li><a href="index.html"><img src="Pictures/Agricultural Harmony Logo Design.png" alt="Logo"
-                    class="logo-img"></a></li>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="services.html">Services</a></li>
-        <li><a href="gallery.html">Gallery</a></li>
-        <li><a class="active" href="contact.html">Contact</a></li>
-    </ul>
 
+    <nav>
+        <a href="index.html" class="nav-logo">
+            <img src="Pictures/Agricultural Harmony Logo Design.png" alt="Real-Fresh Landscaping">
+        </a>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li class="nav-cta"><a class="active" href="contact.html">Free Estimate</a></li>
+        </ul>
+    </nav>
+
+    <div class="page-banner">
+        <h1>Contact Us</h1>
+        <p>Request a free estimate or ask us a question</p>
+    </div>
 
     <section class="contact-section">
         <div class="contact-container">
-            <h1>Contact Us</h1>
-            <p>Have a question or want a free estimate? Use the form below and we'll get back to you shortly.</p>
+            <p class="contact-intro">Fill out the form below and we'll get back to you shortly.</p>
 
             <form action="https://formspree.io/f/mjknoqep" class="fs-form" target="_top" method="POST">
                 <div class="fs-field">
-                    <label class="fs-label" for="name">Name:</label>
-                    <input class="fs-input" id="name" name="name" required />
+                    <label class="fs-label" for="name">Name</label>
+                    <input class="fs-input" id="name" name="name" required placeholder="Your full name" />
                 </div>
                 <div class="fs-field">
-                    <label class="fs-label" for="email">Email Address:</label>
-                    <input class="fs-input" id="email" name="email" required />
+                    <label class="fs-label" for="email">Email Address</label>
+                    <input class="fs-input" id="email" name="email" type="email" required placeholder="your@email.com" />
                 </div>
                 <div class="fs-field">
-                    <label class="fs-label" for="number">Phone Number:</label>
-                    <input class="fs-input" id="number" name="number" />
+                    <label class="fs-label" for="number">Phone Number</label>
+                    <input class="fs-input" id="number" name="number" type="tel" placeholder="(000) 000-0000" />
                 </div>
                 <div class="fs-field">
-                    <label class="fs-label" for="message">Message:</label>
-                    <textarea class="fs-textarea" id="message" name="message" required></textarea>
+                    <label class="fs-label" for="message">Message</label>
+                    <textarea class="fs-textarea" id="message" name="message" required placeholder="Tell us about your project..."></textarea>
                 </div>
                 <div class="fs-button-group">
-                    <button class="fs-button" type="submit">Submit</button>
+                    <button class="fs-button" type="submit">Send Message</button>
                 </div>
             </form>
 
-
-            <p class="alt-contact">Or call us at <strong>815-212-4526</strong></p>
+            <p class="alt-contact">Prefer to call? Reach us at <a href="tel:8152124526"><strong>815-212-4526</strong></a></p>
         </div>
     </section>
 
-    <div class="footer">
-        <div>
-            Real-Fresh Landscaping LLC.<br> 
-            Follow us on social media:
-            <div class="social-icons">
-                <a href="https://www.facebook.com/people/Real-Fresh-Landscaping/100088041076726/" target="_blank" rel="noopener noreferrer">
-                    <img src="https://cdn-icons-png.flaticon.com/512/733/733547.png" alt="Facebook" class="social-icon">
-                </a>
-                <a href="https://www.instagram.com/realfreshlandscaping/" target="_blank" rel="noopener noreferrer">
-                    <img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" alt="Instagram" class="social-icon">
-                </a>
+    <footer>
+        <div class="footer-inner">
+            <div class="footer-brand">
+                <h3>Real-Fresh Landscaping</h3>
+                <p>Professional landscaping and hardscaping in the Greater Joliet area. Family owned and operated since 2020.</p>
+                <div class="footer-social">
+                    <a href="https://www.facebook.com/people/Real-Fresh-Landscaping/100088041076726/" target="_blank" rel="noopener noreferrer">
+                        <img src="https://cdn-icons-png.flaticon.com/512/733/733547.png" alt="Facebook">
+                    </a>
+                    <a href="https://www.instagram.com/realfreshlandscaping/" target="_blank" rel="noopener noreferrer">
+                        <img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" alt="Instagram">
+                    </a>
+                </div>
+            </div>
+            <div class="footer-col">
+                <h4>Navigation</h4>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Hours of Operation</h4>
+                <ul>
+                    <li>Mon &ndash; Fri: 7:00 AM &ndash; 4:30 PM</li>
+                    <li>Saturday: 7:00 AM &ndash; 12:00 PM</li>
+                    <li>Sunday: Closed</li>
+                </ul>
+                <div class="footer-col-gap">
+                    <h4>Contact</h4>
+                    <ul>
+                        <li><a href="tel:8152124526">815-212-4526</a></li>
+                        <li><a href="contact.html">Request an Estimate</a></li>
+                    </ul>
+                </div>
             </div>
         </div>
-        <div class="hours">
-            <h3>Hours of Operation</h3>
-            <ul>
-                <li>Monday - Friday: 7:00 AM - 4:30 PM</li>
-                <li>Saturday: 7:00 AM - 12:00 PM</li>
-                <li>Sunday: Closed</li>
-            </ul>
+        <div class="footer-bottom">
+            &copy; 2025 Real-Fresh Landscaping LLC. All rights reserved.
         </div>
-    </div>
+    </footer>
 
 </body>
-
 </html>
