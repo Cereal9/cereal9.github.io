@@ -277,6 +277,7 @@ nav {
   flex-wrap: wrap;
 }
 
+
 /* ─── STATS STRIP ─── */
 
 .stats-strip {
@@ -374,6 +375,96 @@ nav {
 .services-preview-cta {
   text-align: center;
   margin-top: 44px;
+}
+
+/* ─── REVIEWS ─── */
+
+.reviews-section {
+  padding: 84px 0;
+  background: #f0ede8;
+}
+
+.reviews-track {
+  position: relative;
+  max-width: 760px;
+  margin: 0 auto;
+  min-height: 200px;
+}
+
+.review-slide {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  opacity: 0;
+  transition: opacity 0.9s ease;
+  pointer-events: none;
+}
+
+.review-slide.active {
+  opacity: 1;
+  pointer-events: auto;
+  position: relative;
+}
+
+.review-stars {
+  color: #c4a052;
+  font-size: 20px;
+  letter-spacing: 3px;
+  margin-bottom: 20px;
+}
+
+.review-text {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(16px, 2.2vw, 20px);
+  color: #2a2a2a;
+  line-height: 1.75;
+  margin: 0 0 22px;
+  font-style: italic;
+}
+
+.review-text::before {
+  content: '\201C';
+  font-size: 4em;
+  color: #c4a052;
+  line-height: 0;
+  vertical-align: -0.45em;
+  margin-right: 4px;
+  font-style: normal;
+}
+
+.review-author {
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #1c3a2a;
+  font-style: normal;
+}
+
+.reviews-dots {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 36px;
+}
+
+.dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  border: none;
+  background: #c9bfb3;
+  cursor: pointer;
+  padding: 0;
+  transition: background 0.3s, transform 0.3s;
+}
+
+.dot.active {
+  background: #1c3a2a;
+  transform: scale(1.3);
 }
 
 /* ─── CTA SECTION ─── */
