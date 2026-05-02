@@ -25,6 +25,9 @@
         <a href="index.html" class="nav-logo">
             <img src="Pictures/RF logo.png" alt="Real-Fresh Landscaping">
         </a>
+        <button class="nav-toggle" aria-label="Open menu" aria-expanded="false">
+            <span></span><span></span><span></span>
+        </button>
         <ul class="nav-links">
             <li><a href="index.html">Home</a></li>
             <li><a href="about.html">About</a></li>
@@ -40,126 +43,101 @@
     </div>
 
     <section class="gallery-section">
+
+        <div class="filter-tabs">
+            <button class="filter-btn active" data-filter="all">All Projects</button>
+            <button class="filter-btn" data-filter="patios">Patios &amp; Hardscaping</button>
+            <button class="filter-btn" data-filter="retaining-walls">Retaining Walls</button>
+            <button class="filter-btn" data-filter="lawn-mulch">Lawn &amp; Mulch</button>
+            <button class="filter-btn" data-filter="landscape">Landscape Design</button>
+        </div>
+
         <div class="gallery-grid">
-            <div class="gallery-item">
-                <a href="Pictures/IMG_0396.jpeg">
-                    <img src="Pictures/IMG_0396.jpeg" alt="Unilock Brick Patio">
-                </a>
-                <p>Unilock Brick Patio</p>
+            <div class="gallery-item" data-category="patios" data-caption="Unilock Brick Patio">
+                <img src="Pictures/IMG_0396.jpeg" alt="Unilock Brick Patio">
+                <div class="gallery-overlay"><span>Unilock Brick Patio</span></div>
             </div>
-            <div class="gallery-item">
-                <a href="Pictures/IMG_1402.jpeg">
-                    <img src="Pictures/IMG_1402.jpeg" alt="Plant Retaining Wall">
-                </a>
-                <p>Plant Retaining Wall</p>
+            <div class="gallery-item" data-category="retaining-walls" data-caption="Plant Retaining Wall">
+                <img src="Pictures/IMG_1402.jpeg" alt="Plant Retaining Wall">
+                <div class="gallery-overlay"><span>Plant Retaining Wall</span></div>
             </div>
-            <div class="gallery-item">
-                <a href="Pictures/IMG_1446.jpeg">
-                    <img src="Pictures/IMG_1446.jpeg" alt="Pool Water Fall">
-                </a>
-                <p>Pool Water Fall</p>
+            <div class="gallery-item" data-category="landscape" data-caption="Pool Waterfall">
+                <img src="Pictures/IMG_1446.jpeg" alt="Pool Waterfall">
+                <div class="gallery-overlay"><span>Pool Waterfall</span></div>
             </div>
-            <div class="gallery-item">
-                <a href="Pictures/IMG_1416.jpeg">
-                    <img src="Pictures/IMG_1416.jpeg" alt="Edging and Mulch">
-                </a>
-                <p>Edging &amp; Mulch</p>
+            <div class="gallery-item" data-category="lawn-mulch" data-caption="Edging &amp; Mulch">
+                <img src="Pictures/IMG_1416.jpeg" alt="Edging and Mulch">
+                <div class="gallery-overlay"><span>Edging &amp; Mulch</span></div>
             </div>
-            <div class="gallery-item">
-                <a href="Pictures/harscape.jpg">
-                    <img src="Pictures/harscape.jpg" alt="Hardscaping">
-                </a>
-                <p>Hardscaping</p>
+            <div class="gallery-item" data-category="patios" data-caption="Hardscaping">
+                <img src="Pictures/harscape.jpg" alt="Hardscaping">
+                <div class="gallery-overlay"><span>Hardscaping</span></div>
             </div>
-            <div class="gallery-item">
-                <a href="Pictures/IMG_0471.jpeg">
-                    <img src="Pictures/IMG_0471.jpeg" alt="Landscaping Work">
-                </a>
-                <p>Edging with Mulch</p>
+            <div class="gallery-item" data-category="lawn-mulch" data-caption="Edging with Mulch">
+                <img src="Pictures/IMG_0471.jpeg" alt="Edging with Mulch">
+                <div class="gallery-overlay"><span>Edging with Mulch</span></div>
             </div>
-            <div class="gallery-item">
-                <a href="Pictures/IMG_0473.jpeg">
-                    <img src="Pictures/IMG_0473.jpeg" alt="Landscaping Work">
-                </a>
-                <p>Rock Decoration</p>
+            <div class="gallery-item" data-category="landscape" data-caption="Rock Decoration">
+                <img src="Pictures/IMG_0473.jpeg" alt="Rock Decoration">
+                <div class="gallery-overlay"><span>Rock Decoration</span></div>
             </div>
-            <div class="gallery-item">
-                <a href="Pictures/IMG_2052.jpeg">
-                    <img src="Pictures/IMG_2052.jpeg" alt="Landscaping Work">
-                </a>
-                <p>Lawn Maintenance</p>
+            <div class="gallery-item" data-category="lawn-mulch" data-caption="Lawn Maintenance">
+                <img src="Pictures/IMG_2052.jpeg" alt="Lawn Maintenance">
+                <div class="gallery-overlay"><span>Lawn Maintenance</span></div>
             </div>
-            <div class="gallery-item">
-                <a href="Pictures/2B5942AB-96D0-4FC7-8F40-EC6D67047F0E_1_105_c.jpeg">
-                    <img src="Pictures/2B5942AB-96D0-4FC7-8F40-EC6D67047F0E_1_105_c.jpeg" alt="Landscaping Project">
-                </a>
-                <p>Retaining Wall </p>
+            <div class="gallery-item" data-category="retaining-walls" data-caption="Retaining Wall">
+                <img src="Pictures/2B5942AB-96D0-4FC7-8F40-EC6D67047F0E_1_105_c.jpeg" alt="Retaining Wall">
+                <div class="gallery-overlay"><span>Retaining Wall</span></div>
             </div>
-            <div class="gallery-item">
-                <a href="Pictures/4EAA0632-F39D-4230-A032-AE6E489353B1_1_105_c.jpeg">
-                    <img src="Pictures/4EAA0632-F39D-4230-A032-AE6E489353B1_1_105_c.jpeg" alt="Landscaping Project">
-                </a>
-                <p>Rock Decor and Retaining Wall</p>
+            <div class="gallery-item" data-category="retaining-walls" data-caption="Rock Decor &amp; Retaining Wall">
+                <img src="Pictures/4EAA0632-F39D-4230-A032-AE6E489353B1_1_105_c.jpeg" alt="Rock Decor and Retaining Wall">
+                <div class="gallery-overlay"><span>Rock Decor &amp; Retaining Wall</span></div>
             </div>
-            <div class="gallery-item">
-                <a href="Pictures/C99BA7F3-55E8-4F41-AC5F-4F7C331CA5B2_1_105_c.jpeg">
-                    <img src="Pictures/C99BA7F3-55E8-4F41-AC5F-4F7C331CA5B2_1_105_c.jpeg" alt="Landscaping Project">
-                </a>
-                <p>Landscape Design</p>
+            <div class="gallery-item" data-category="landscape" data-caption="Landscape Design">
+                <img src="Pictures/C99BA7F3-55E8-4F41-AC5F-4F7C331CA5B2_1_105_c.jpeg" alt="Landscape Design">
+                <div class="gallery-overlay"><span>Landscape Design</span></div>
             </div>
-            <div class="gallery-item">
-                <a href="Pictures/F519D658-EC34-4314-B67E-E04724938170_1_105_c.jpeg">
-                    <img src="Pictures/F519D658-EC34-4314-B67E-E04724938170_1_105_c.jpeg" alt="Landscaping Project">
-                </a>
-                <p>Retaining Wall and Grass seeding</p>
+            <div class="gallery-item" data-category="retaining-walls" data-caption="Retaining Wall &amp; Grass Seeding">
+                <img src="Pictures/F519D658-EC34-4314-B67E-E04724938170_1_105_c.jpeg" alt="Retaining Wall and Grass Seeding">
+                <div class="gallery-overlay"><span>Retaining Wall &amp; Grass Seeding</span></div>
+            </div>
+            <div class="gallery-item" data-category="lawn-mulch" data-caption="Mulch &amp; Edging">
+                <img src="Pictures/IMG_0479.jpeg" alt="Mulch and Edging">
+                <div class="gallery-overlay"><span>Mulch &amp; Edging</span></div>
+            </div>
+            <div class="gallery-item" data-category="retaining-walls" data-caption="Retaining Wall Detail">
+                <img src="Pictures/IMG_1403.jpeg" alt="Retaining Wall Detail">
+                <div class="gallery-overlay"><span>Retaining Wall Detail</span></div>
+            </div>
+            <div class="gallery-item" data-category="lawn-mulch" data-caption="Mulch &amp; Plants">
+                <img src="Pictures/IMG_0472.jpeg" alt="Mulch and Plants">
+                <div class="gallery-overlay"><span>Mulch &amp; Plants</span></div>
+            </div>
+            <div class="gallery-item" data-category="retaining-walls" data-caption="Retaining Wall &amp; Edging">
+                <img src="Pictures/IMG_1401.jpeg" alt="Retaining Wall and Edging">
+                <div class="gallery-overlay"><span>Retaining Wall &amp; Edging</span></div>
             </div>
         </div>
 
-        <div class="slideshow-wrap">
-            <div class="slideshow-header">
-                <h2>Project Highlights</h2>
-            </div>
+    </section>
 
-            <div class="container">
-                <div class="mySlides">
-                    <div class="numbertext">1 / 5</div>
-                    <img src="Pictures/IMG_0479.jpeg" style="width:100%" alt="Mulch and edging">
-                </div>
-                <div class="mySlides">
-                    <div class="numbertext">2 / 5</div>
-                    <img src="Pictures/IMG_1446.jpeg" style="width:100%" alt="Water retaining wall">
-                </div>
-                <div class="mySlides">
-                    <div class="numbertext">3 / 5</div>
-                    <img src="Pictures/IMG_1403.jpeg" style="width:100%" alt="Retaining wall">
-                </div>
-                <div class="mySlides">
-                    <div class="numbertext">4 / 5</div>
-                    <img src="Pictures/IMG_0472.jpeg" style="width:100%" alt="Mulch and plants">
-                </div>
-                <div class="mySlides">
-                    <div class="numbertext">5 / 5</div>
-                    <img src="Pictures/IMG_1401.jpeg" style="width:100%" alt="Retaining wall edging">
-                </div>
-
-                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-                <a class="next" onclick="plusSlides(1)">&#10095;</a>
-
-                <div class="caption-container">
-                    <p id="caption"></p>
-                </div>
-
-                <div class="thumbnails">
-                    <img class="demo cursor" src="Pictures/IMG_0479.jpeg" onclick="currentSlide(1)" alt="Mulch and edging">
-                    <img class="demo cursor" src="Pictures/IMG_1446.jpeg" onclick="currentSlide(2)" alt="Water retaining wall">
-                    <img class="demo cursor" src="Pictures/IMG_1403.jpeg" onclick="currentSlide(3)" alt="Retaining wall">
-                    <img class="demo cursor" src="Pictures/IMG_0472.jpeg" onclick="currentSlide(4)" alt="Mulch and plants">
-                    <img class="demo cursor" src="Pictures/IMG_1401.jpeg" onclick="currentSlide(5)" alt="Retaining wall edging">
-
-                </div>
-            </div>
+    <section class="gallery-cta">
+        <div class="gallery-cta-inner">
+            <h2>Ready to Transform Your Yard?</h2>
+            <p>Every project starts with a free, no-obligation estimate.</p>
+            <a href="contact.html" class="cta-btn">Get a Free Estimate</a>
         </div>
     </section>
+
+    <div class="lightbox" id="lightbox" aria-hidden="true">
+        <button class="lightbox-close" id="lb-close" aria-label="Close">&times;</button>
+        <button class="lightbox-prev" id="lb-prev" aria-label="Previous">&#10094;</button>
+        <button class="lightbox-next" id="lb-next" aria-label="Next">&#10095;</button>
+        <div class="lightbox-content">
+            <img id="lb-img" src="" alt="">
+            <p id="lb-caption"></p>
+        </div>
+    </div>
 
     <footer>
         <div class="footer-inner">
@@ -206,25 +184,85 @@
         </div>
     </footer>
 
+    <div class="mobile-bar">
+        <a href="tel:8152124526" class="mobile-bar-call">Call Now</a>
+        <a href="contact.html" class="mobile-bar-estimate">Free Estimate</a>
+    </div>
+    <script src="app.js"></script>
     <script>
-        let slideIndex = 1;
-        showSlides(slideIndex);
+        // ── Filter tabs ──
+        const filterBtns = document.querySelectorAll('.filter-btn');
+        const galleryItems = document.querySelectorAll('.gallery-item');
 
-        function plusSlides(n) { showSlides(slideIndex += n); }
-        function currentSlide(n) { showSlides(slideIndex = n); }
+        filterBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                filterBtns.forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+                const filter = btn.dataset.filter;
+                galleryItems.forEach(item => {
+                    const show = filter === 'all' || item.dataset.category === filter;
+                    item.classList.toggle('hidden', !show);
+                });
+            });
+        });
 
-        function showSlides(n) {
-            const slides = document.getElementsByClassName("mySlides");
-            const dots = document.getElementsByClassName("demo");
-            const captionText = document.getElementById("caption");
-            if (n > slides.length) { slideIndex = 1; }
-            if (n < 1) { slideIndex = slides.length; }
-            for (let i = 0; i < slides.length; i++) slides[i].style.display = "none";
-            for (let i = 0; i < dots.length; i++) dots[i].classList.remove("active");
-            slides[slideIndex - 1].style.display = "block";
-            dots[slideIndex - 1].classList.add("active");
-            captionText.innerHTML = dots[slideIndex - 1].alt;
+        // ── Lightbox ──
+        const lightbox = document.getElementById('lightbox');
+        const lbImg    = document.getElementById('lb-img');
+        const lbCaption = document.getElementById('lb-caption');
+        let currentIndex = -1;
+
+        function visibleItems() {
+            return [...galleryItems].filter(item => !item.classList.contains('hidden'));
         }
+
+        function openLightbox(index) {
+            currentIndex = index;
+            const item = visibleItems()[currentIndex];
+            lbImg.src = item.querySelector('img').src;
+            lbImg.alt = item.querySelector('img').alt;
+            lbCaption.textContent = item.dataset.caption;
+            lightbox.classList.add('open');
+            lightbox.setAttribute('aria-hidden', 'false');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeLightbox() {
+            lightbox.classList.remove('open');
+            lightbox.setAttribute('aria-hidden', 'true');
+            document.body.style.overflow = '';
+        }
+
+        function navigate(dir) {
+            const visible = visibleItems();
+            currentIndex = (currentIndex + dir + visible.length) % visible.length;
+            const item = visible[currentIndex];
+            lbImg.src = item.querySelector('img').src;
+            lbImg.alt = item.querySelector('img').alt;
+            lbCaption.textContent = item.dataset.caption;
+        }
+
+        galleryItems.forEach(item => {
+            item.addEventListener('click', () => {
+                const visible = visibleItems();
+                openLightbox(visible.indexOf(item));
+            });
+        });
+
+        document.getElementById('lb-close').addEventListener('click', closeLightbox);
+        document.getElementById('lb-prev').addEventListener('click', () => navigate(-1));
+        document.getElementById('lb-next').addEventListener('click', () => navigate(1));
+
+        lightbox.addEventListener('click', e => {
+            if (e.target === lightbox) closeLightbox();
+        });
+
+        document.addEventListener('keydown', e => {
+            if (!lightbox.classList.contains('open')) return;
+            if (e.key === 'Escape')      closeLightbox();
+            if (e.key === 'ArrowLeft')   navigate(-1);
+            if (e.key === 'ArrowRight')  navigate(1);
+        });
     </script>
 
 </body>
