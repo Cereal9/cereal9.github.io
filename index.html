@@ -13,249 +13,1268 @@
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#f7f5ef">
     <title>Real-Fresh Landscaping | Greater Joliet Area</title>
     <meta name="description" content="Professional landscaping and hardscaping services in the Greater Joliet area. Family owned since 2020. Free on-site estimates available.">
-    <link rel="stylesheet" href="style.css">
-    <link rel="icon" type="image/x-icon" href="Pictures/RF logo.png">
+    <meta property="og:title" content="Real-Fresh Landscaping | Greater Joliet Area">
+    <meta property="og:description" content="Professional landscaping and hardscaping services in the Greater Joliet area. Family owned since 2020. Free on-site estimates.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://realfreshlandscaping.com/">
+    <meta property="og:image" content="https://realfreshlandscaping.com/Pictures/harscape.jpg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,600;12..96,700;12..96,800&family=Hanken+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="Pictures/RF logo.png">
+
+<style>
+:root {
+  --ink: #14271b;
+  --forest: #1f3d2b;
+  --forest2: #2a5238;
+  --leaf: #7cb342;
+  --leaf-deep: #5d8a2e;
+  --bone: #f7f5ef;
+  --stone: #ece7da;
+  --line: #e4dfd2;
+  --muted: #5f6b5e;
+  --text: #1b211a;
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: 'Hanken Grotesk', sans-serif;
+  color: var(--text);
+  background: var(--bone);
+  line-height: 1.6;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+
+img { display: block; max-width: 100%; }
+
+::selection { background: var(--leaf); color: var(--ink); }
+
+a:focus-visible,
+button:focus-visible {
+  outline: 2px solid var(--leaf-deep);
+  outline-offset: 3px;
+}
+
+h1, h2, h3 { font-family: 'Bricolage Grotesque', sans-serif; color: var(--ink); }
+
+.wrap {
+  max-width: 1240px;
+  margin: 0 auto;
+  padding-left: clamp(20px, 5vw, 56px);
+  padding-right: clamp(20px, 5vw, 56px);
+}
+
+.eyebrow {
+  font-size: 12.5px;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--leaf-deep);
+  margin-bottom: 14px;
+}
+
+.eyebrow--light { color: var(--leaf); }
+
+.h2 {
+  font-weight: 700;
+  font-size: clamp(30px, 4vw, 46px);
+  line-height: 1.05;
+  letter-spacing: -0.02em;
+}
+
+/* ─── BUTTONS ─── */
+
+.btn {
+  display: inline-block;
+  text-decoration: none;
+  font-family: inherit;
+  font-weight: 700;
+  font-size: 16px;
+  padding: 16px 30px;
+  border-radius: 999px;
+  border: none;
+  cursor: pointer;
+  transition: transform 0.18s ease, box-shadow 0.18s ease, background 0.18s ease, border-color 0.18s ease;
+}
+
+.btn-ink { background: var(--ink); color: #fff; }
+.btn-ink:hover { transform: translateY(-2px); box-shadow: 0 14px 30px rgba(20,39,27,0.28); }
+
+.btn-leaf { background: var(--leaf); color: var(--ink); }
+.btn-leaf:hover { transform: translateY(-2px); box-shadow: 0 14px 30px rgba(124,179,66,0.4); }
+
+.btn-ghost { background: transparent; color: var(--ink); border: 1.5px solid rgba(20,39,27,0.22); padding: 16px 28px; }
+.btn-ghost:hover { border-color: var(--ink); background: rgba(20,39,27,0.04); }
+
+.btn-ghost-light { background: transparent; color: #fff; border: 1.5px solid rgba(255,255,255,0.5); padding: 16px 24px; }
+.btn-ghost-light:hover { background: rgba(255,255,255,0.12); }
+
+.text-link {
+  text-decoration: none;
+  color: var(--ink);
+  font-weight: 700;
+  font-size: 15px;
+  border-bottom: 2px solid var(--leaf);
+  padding-bottom: 3px;
+  white-space: nowrap;
+  transition: color 0.18s ease;
+}
+
+.text-link:hover { color: var(--leaf-deep); }
+
+/* ─── NAV ─── */
+
+nav {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  display: flex;
+  align-items: center;
+  gap: 32px;
+  padding: 14px clamp(20px, 5vw, 56px);
+  background: rgba(247, 245, 239, 0.82);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border-bottom: 1px solid var(--line);
+}
+
+.nav-logo { display: flex; align-items: center; margin-right: auto; text-decoration: none; }
+.nav-logo img { height: 46px; width: auto; }
+
+.nav-links { display: flex; align-items: center; gap: 30px; }
+
+.nav-links a {
+  text-decoration: none;
+  color: var(--ink);
+  font-weight: 500;
+  font-size: 15px;
+  letter-spacing: 0.01em;
+  transition: color 0.18s ease;
+}
+
+.nav-links a:hover { color: var(--leaf-deep); }
+
+.nav-right { display: flex; align-items: center; gap: 18px; }
+
+.nav-phone {
+  text-decoration: none;
+  color: var(--forest);
+  font-weight: 700;
+  font-size: 15px;
+  letter-spacing: 0.01em;
+  display: flex;
+  align-items: center;
+  gap: 7px;
+}
+
+.nav-phone .pulse {
+  display: inline-block;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--leaf);
+  box-shadow: 0 0 0 3px rgba(124,179,66,0.22);
+}
+
+.nav-cta {
+  text-decoration: none;
+  background: var(--leaf);
+  color: var(--ink);
+  font-weight: 700;
+  font-size: 14.5px;
+  padding: 11px 20px;
+  border-radius: 999px;
+  letter-spacing: 0.01em;
+  white-space: nowrap;
+  transition: transform 0.18s ease, box-shadow 0.18s ease, background 0.18s ease, color 0.18s ease;
+}
+
+.nav-cta:hover {
+  background: var(--leaf-deep);
+  color: #fff;
+  transform: translateY(-1px);
+  box-shadow: 0 8px 22px rgba(124,179,66,0.35);
+}
+
+.nav-toggle {
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 24px;
+  height: 18px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  flex-shrink: 0;
+}
+
+.nav-toggle span {
+  display: block;
+  width: 100%;
+  height: 2px;
+  background: var(--ink);
+  border-radius: 2px;
+  transition: transform 0.28s ease, opacity 0.2s;
+}
+
+.nav-toggle.open span:nth-child(1) { transform: translateY(8px) rotate(45deg); }
+.nav-toggle.open span:nth-child(2) { opacity: 0; }
+.nav-toggle.open span:nth-child(3) { transform: translateY(-8px) rotate(-45deg); }
+
+/* ─── HERO ─── */
+
+.hero {
+  display: grid;
+  grid-template-columns: 1.05fr 1fr;
+  gap: clamp(28px, 5vw, 72px);
+  align-items: center;
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: clamp(40px, 7vw, 92px) clamp(20px, 5vw, 56px) clamp(36px, 5vw, 64px);
+}
+
+.hero-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 7px 15px;
+  border-radius: 999px;
+  background: rgba(124,179,66,0.12);
+  border: 1px solid rgba(124,179,66,0.3);
+  margin-bottom: 26px;
+}
+
+.hero-pill span {
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--leaf-deep);
+}
+
+.hero h1 {
+  font-weight: 700;
+  font-size: clamp(40px, 6vw, 72px);
+  line-height: 1.02;
+  letter-spacing: -0.02em;
+  margin-bottom: 22px;
+  text-wrap: balance;
+}
+
+.hero h1 em { font-style: normal; color: var(--leaf-deep); }
+
+.hero-sub {
+  font-size: clamp(16px, 1.7vw, 19px);
+  color: var(--muted);
+  max-width: 30em;
+  margin-bottom: 34px;
+  line-height: 1.6;
+}
+
+.hero-actions { display: flex; flex-wrap: wrap; gap: 14px; margin-bottom: 38px; }
+
+.hero-proof { display: flex; gap: 28px; flex-wrap: wrap; align-items: center; }
+.hero-proof .stars { color: var(--leaf); font-size: 17px; letter-spacing: 2px; }
+.hero-proof .proof-item { display: flex; align-items: center; gap: 9px; }
+.hero-proof .proof-label { font-size: 14px; color: var(--muted); font-weight: 600; }
+.hero-proof .divider { width: 1px; height: 22px; background: var(--line); }
+
+.hero-media { position: relative; }
+
+.hero-photo {
+  position: relative;
+  border-radius: 22px;
+  overflow: hidden;
+  box-shadow: 0 30px 70px -20px rgba(20,39,27,0.45);
+  aspect-ratio: 4 / 4.4;
+}
+
+.hero-photo img { width: 100%; height: 100%; object-fit: cover; }
+
+.hero-badge {
+  position: absolute;
+  left: -18px;
+  bottom: 34px;
+  background: #fff;
+  border-radius: 16px;
+  padding: 16px 22px;
+  box-shadow: 0 18px 40px -12px rgba(20,39,27,0.35);
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.hero-badge strong {
+  font-family: 'Bricolage Grotesque', sans-serif;
+  font-weight: 800;
+  font-size: 30px;
+  color: var(--leaf-deep);
+  line-height: 1;
+}
+
+.hero-badge span {
+  font-size: 12.5px;
+  font-weight: 600;
+  color: var(--muted);
+  line-height: 1.3;
+  max-width: 9em;
+}
+
+@keyframes heroRise {
+  from { opacity: 0; transform: translateY(26px); }
+  to   { opacity: 1; transform: none; }
+}
+
+.hero-copy > *  { animation: heroRise 0.7s ease both; }
+.hero h1        { animation-delay: 0.08s; }
+.hero-sub       { animation-delay: 0.16s; }
+.hero-actions   { animation-delay: 0.24s; }
+.hero-proof     { animation-delay: 0.32s; }
+.hero-media     { animation: heroRise 0.8s ease 0.2s both; }
+
+/* ─── TRUST STRIP ─── */
+
+.trust {
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+  background: #fff;
+}
+
+.trust-grid { display: grid; grid-template-columns: repeat(4, 1fr); }
+
+.trust-item { padding: 30px 18px; text-align: center; }
+.trust-item + .trust-item { border-left: 1px solid var(--line); }
+
+.trust-item strong {
+  display: block;
+  font-family: 'Bricolage Grotesque', sans-serif;
+  font-weight: 800;
+  font-size: clamp(24px, 2.6vw, 32px);
+  color: var(--ink);
+  line-height: 1;
+  margin-bottom: 8px;
+}
+
+.trust-item span {
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+/* ─── SECTIONS ─── */
+
+.section { padding: clamp(60px, 8vw, 104px) 0; }
+
+.section-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin-bottom: 44px;
+}
+
+.section-head .lede { max-width: 34em; }
+
+/* ─── SERVICES ─── */
+
+.services-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+
+.service-card {
+  background: #fff;
+  border-radius: 18px;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.service-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 24px 50px -22px rgba(20,39,27,0.4);
+}
+
+.service-img { position: relative; height: 220px; overflow: hidden; }
+.service-img img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.4s ease; }
+.service-card:hover .service-img img { transform: scale(1.05); }
+
+.service-num {
+  position: absolute;
+  top: 14px;
+  left: 14px;
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  background: rgba(247,245,239,0.92);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Bricolage Grotesque', sans-serif;
+  font-weight: 800;
+  font-size: 14px;
+  color: var(--leaf-deep);
+}
+
+.service-body { padding: 24px 24px 28px; }
+
+.service-body h3 {
+  font-weight: 700;
+  font-size: 21px;
+  margin-bottom: 10px;
+  letter-spacing: -0.01em;
+}
+
+.service-body p { font-size: 14.5px; color: var(--muted); line-height: 1.62; }
+
+/* ─── SELECTED WORK ─── */
+
+.work { background: var(--ink); color: #fff; }
+.work .h2 { color: #fff; }
+.work .section-head p { font-size: 15px; color: rgba(255,255,255,0.6); max-width: 24em; }
+
+.work-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-auto-rows: 200px;
+  gap: 14px;
+}
+
+.work-grid figure { position: relative; border-radius: 14px; overflow: hidden; }
+.work-grid figure:first-child { grid-column: span 2; grid-row: span 2; }
+
+.work-grid img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.4s ease; }
+.work-grid figure:hover img { transform: scale(1.05); }
+
+.work-grid figcaption {
+  position: absolute;
+  left: 0; right: 0; bottom: 0;
+  padding: 14px 16px;
+  background: linear-gradient(180deg, transparent, rgba(13,24,16,0.78));
+  color: #fff;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.01em;
+}
+
+/* ─── REVIEWS ─── */
+
+.reviews-head { text-align: center; max-width: 34em; margin: 0 auto 48px; }
+
+.reviews-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+
+.review-card {
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  padding: 30px 28px;
+  display: flex;
+  flex-direction: column;
+}
+
+.review-card .stars { color: var(--leaf); font-size: 16px; letter-spacing: 2px; margin-bottom: 18px; }
+.review-card p { font-size: 16px; line-height: 1.6; margin-bottom: 22px; font-weight: 500; }
+
+.review-card cite {
+  margin-top: auto;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  color: var(--ink);
+  letter-spacing: 0.02em;
+}
+
+.reviews-foot { text-align: center; margin-top: 36px; font-size: 14px; color: var(--muted); }
+.reviews-foot strong { color: var(--ink); }
+
+.reviews-foot a {
+  color: var(--leaf-deep);
+  font-weight: 700;
+  text-decoration: none;
+  border-bottom: 2px solid rgba(124,179,66,0.4);
+}
+
+/* ─── ABOUT / CTA BAND ─── */
+
+.band-section { padding: 0 clamp(20px, 5vw, 56px) clamp(60px, 8vw, 100px); }
+
+.band {
+  position: relative;
+  max-width: 1240px;
+  margin: 0 auto;
+  border-radius: 26px;
+  overflow: hidden;
+  background: var(--forest);
+}
+
+.band-grid { display: grid; grid-template-columns: 1.1fr 1fr; align-items: stretch; }
+
+.band-copy { padding: clamp(36px, 5vw, 72px); color: #fff; }
+
+.band-copy h2 {
+  font-weight: 700;
+  font-size: clamp(28px, 3.6vw, 44px);
+  line-height: 1.06;
+  letter-spacing: -0.02em;
+  margin-bottom: 18px;
+  color: #fff;
+}
+
+.band-copy > p {
+  font-size: 16px;
+  line-height: 1.7;
+  color: rgba(255,255,255,0.78);
+  margin-bottom: 32px;
+  max-width: 32em;
+}
+
+.band-actions { display: flex; flex-wrap: wrap; gap: 14px; align-items: center; }
+
+.band-hours { display: flex; gap: 26px; margin-top: 34px; flex-wrap: wrap; }
+.band-hours .divider { width: 1px; background: rgba(255,255,255,0.18); }
+
+.band-hours strong {
+  display: block;
+  font-family: 'Bricolage Grotesque', sans-serif;
+  font-weight: 800;
+  font-size: 22px;
+  color: #fff;
+}
+
+.band-hours span { font-size: 13px; color: rgba(255,255,255,0.6); }
+
+.band-photo { position: relative; min-height: 340px; }
+.band-photo img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+
+/* ─── ESTIMATE FORM ─── */
+
+.estimate { background: #fff; border-top: 1px solid var(--line); }
+
+.estimate-head { text-align: center; max-width: 34em; margin: 0 auto 44px; }
+.estimate-head p { color: var(--muted); margin-top: 14px; }
+
+.form-card {
+  background: var(--bone);
+  border: 1px solid var(--line);
+  border-radius: 26px;
+  padding: clamp(28px, 4vw, 52px);
+  max-width: 760px;
+  margin: 0 auto;
+}
+
+.est-form { display: grid; row-gap: 20px; }
+
+.form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+
+.field { display: flex; flex-direction: column; row-gap: 8px; }
+
+.field label {
+  color: var(--ink);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.field input,
+.field textarea {
+  appearance: none;
+  font-family: inherit;
+  border-radius: 12px;
+  border: 1.5px solid var(--line);
+  color: var(--text);
+  font-size: 15px;
+  line-height: 1.5;
+  outline: none;
+  padding: 13px 16px;
+  background: #fff;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.field input:focus,
+.field textarea:focus {
+  border-color: var(--leaf-deep);
+  box-shadow: 0 0 0 3px rgba(124,179,66,0.18);
+}
+
+.field ::placeholder { color: #a8aba2; font-size: 14px; }
+
+.field textarea { resize: vertical; min-height: 130px; }
+
+.pill-group { display: flex; gap: 10px; flex-wrap: wrap; }
+
+.pill { cursor: pointer; position: relative; }
+
+.pill input[type="radio"] { position: absolute; opacity: 0; width: 0; height: 0; }
+
+.pill span {
+  display: block;
+  padding: 9px 24px;
+  border: 1.5px solid var(--line);
+  border-radius: 999px;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--muted);
+  background: #fff;
+  transition: border-color 0.2s, background 0.2s, color 0.2s;
+  user-select: none;
+}
+
+.pill:hover span { border-color: var(--ink); color: var(--ink); }
+
+.pill input[type="radio"]:checked + span {
+  border-color: var(--ink);
+  background: var(--ink);
+  color: #fff;
+}
+
+.form-submit { width: 100%; margin-top: 6px; }
+
+/* ─── FOOTER ─── */
+
+footer {
+  background: var(--ink);
+  color: rgba(255,255,255,0.6);
+  padding: clamp(48px, 6vw, 72px) clamp(20px, 5vw, 56px) 0;
+}
+
+.footer-inner {
+  max-width: 1240px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1.6fr 1fr 1fr 1fr;
+  gap: 40px;
+}
+
+.footer-brand img {
+  height: 54px;
+  width: auto;
+  margin-bottom: 18px;
+  filter: brightness(0) invert(1);
+  opacity: 0.92;
+}
+
+.footer-brand p {
+  font-size: 14px;
+  line-height: 1.7;
+  color: rgba(255,255,255,0.5);
+  max-width: 26em;
+  margin-bottom: 18px;
+}
+
+.footer-social { display: flex; gap: 10px; }
+
+.footer-social a {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  border: 1px solid rgba(255,255,255,0.18);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  color: rgba(255,255,255,0.7);
+  transition: background 0.18s ease, color 0.18s ease, border-color 0.18s ease;
+}
+
+.footer-social a:hover {
+  background: var(--leaf);
+  color: var(--ink);
+  border-color: var(--leaf);
+}
+
+.footer-social svg { width: 16px; height: 16px; }
+
+.footer-col h4 {
+  color: #fff;
+  font-size: 11px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  font-weight: 700;
+  margin-bottom: 16px;
+  font-family: 'Hanken Grotesk', sans-serif;
+}
+
+.footer-col .col-links { display: flex; flex-direction: column; gap: 11px; font-size: 14.5px; }
+
+.footer-col .col-links a,
+.footer-col .col-links span {
+  color: rgba(255,255,255,0.55);
+  text-decoration: none;
+  transition: color 0.18s ease;
+}
+
+.footer-col .col-links a:hover { color: var(--leaf); }
+
+.footer-col .col-links a.phone { color: var(--leaf); font-weight: 700; }
+
+.footer-bottom {
+  max-width: 1240px;
+  margin: 48px auto 0;
+  padding: 22px 0;
+  border-top: 1px solid rgba(255,255,255,0.09);
+  font-size: 13px;
+  color: rgba(255,255,255,0.32);
+  text-align: center;
+}
+
+/* ─── MOBILE CTA BAR ─── */
+
+.mobile-bar { display: none; }
+
+/* ─── SCROLL REVEAL ─── */
+
+[data-reveal] {
+  opacity: 0;
+  transform: translateY(26px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+[data-reveal].is-visible { opacity: 1; transform: none; }
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  [data-reveal] { opacity: 1 !important; transform: none !important; transition: none !important; }
+  .hero-copy > *, .hero-media { animation: none; }
+}
+
+/* ─── RESPONSIVE ─── */
+
+@media (max-width: 1000px) {
+  .nav-phone { display: none; }
+}
+
+@media (max-width: 960px) {
+  .hero { grid-template-columns: 1fr; }
+  .hero-photo { aspect-ratio: 4 / 3; }
+  .hero-badge { left: 14px; bottom: 20px; }
+
+  .services-grid { grid-template-columns: 1fr 1fr; }
+  .reviews-grid { grid-template-columns: 1fr; max-width: 620px; margin: 0 auto; }
+
+  .work-grid { grid-template-columns: repeat(2, 1fr); grid-auto-rows: 170px; }
+
+  .band-grid { grid-template-columns: 1fr; }
+  .band-photo { min-height: 260px; }
+
+  .footer-inner { grid-template-columns: 1fr 1fr; }
+}
+
+@media (max-width: 768px) {
+  .nav-toggle { display: flex; }
+
+  .nav-links {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0;
+    background: var(--bone);
+    border-bottom: 1px solid var(--line);
+    box-shadow: 0 16px 30px rgba(20,39,27,0.10);
+    padding: 6px 0 10px;
+  }
+
+  .nav-links.open { display: flex; }
+
+  .nav-links a {
+    padding: 14px clamp(20px, 5vw, 56px);
+    font-size: 15.5px;
+    border-top: 1px solid var(--line);
+  }
+
+  .nav-links a:first-child { border-top: none; }
+
+  .hero-actions .btn { width: 100%; max-width: 320px; text-align: center; }
+
+  .trust-grid { grid-template-columns: 1fr 1fr; }
+  .trust-item + .trust-item { border-left: none; }
+  .trust-item:nth-child(even) { border-left: 1px solid var(--line); }
+  .trust-item:nth-child(n+3) { border-top: 1px solid var(--line); }
+
+  .mobile-bar {
+    display: flex;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 200;
+    box-shadow: 0 -2px 16px rgba(20,39,27,0.22);
+  }
+
+  .mobile-bar a {
+    flex: 1;
+    text-align: center;
+    padding: 16px 8px;
+    font-size: 14px;
+    font-weight: 700;
+    text-decoration: none;
+    letter-spacing: 0.02em;
+  }
+
+  .mobile-bar-call {
+    background: var(--forest);
+    color: #fff;
+    border-right: 1px solid rgba(255,255,255,0.15);
+  }
+
+  .mobile-bar-estimate { background: var(--leaf); color: var(--ink); }
+
+  body { padding-bottom: 56px; }
+}
+
+@media (max-width: 620px) {
+  .services-grid { grid-template-columns: 1fr; }
+  .form-row { grid-template-columns: 1fr; }
+  .footer-inner { grid-template-columns: 1fr; gap: 32px; }
+  .work-grid { grid-auto-rows: 140px; }
+
+  /* Keep the hero headline comfortable on small phones */
+  .hero h1 { font-size: clamp(32px, 9vw, 40px); }
+
+  /* Full-width, consistent CTAs on phones — hero and band match */
+  .hero-actions .btn { width: 100%; max-width: none; }
+  .band-actions { width: 100%; }
+  .band-actions .btn { flex: 1 1 100%; text-align: center; }
+}
+
+@media (max-width: 520px) {
+  .nav-cta { display: none; }
+  nav { gap: 16px; }
+
+  /* Stop the eyebrow pill from wrapping/overflowing */
+  .hero-pill { padding: 6px 13px; }
+  .hero-pill span { font-size: 10.5px; letter-spacing: 0.08em; }
+
+  /* Slightly tighten section rhythm so the page doesn't feel sparse */
+  .section { padding: 56px 0; }
+  .band-section { padding-bottom: 56px; }
+}
+</style>
 </head>
 <body>
 
     <nav>
-        <a href="index.html" class="nav-logo">
-            <img src="Pictures/RF logo.png" alt="Real-Fresh Landscaping">
+        <a href="#top" class="nav-logo">
+            <img src="Pictures/REAL FRESH LOGO.png" alt="Real Fresh Landscaping">
         </a>
-        <button class="nav-toggle" aria-label="Open menu" aria-expanded="false">
-            <span></span><span></span><span></span>
-        </button>
-        <ul class="nav-links">
-            <li><a class="active" href="index.html">Home</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="services.html">Services</a></li>
-            <li><a href="gallery.html">Gallery</a></li>
-            <li class="nav-cta"><a href="contact.html">Free Estimate</a></li>
-        </ul>
+        <div class="nav-links">
+            <a href="#work">Work</a>
+            <a href="#services">Services</a>
+            <a href="#reviews">Reviews</a>
+            <a href="#about">About</a>
+        </div>
+        <div class="nav-right">
+            <a href="tel:8152124526" class="nav-phone">
+                <span class="pulse"></span>
+                815&middot;212&middot;4526
+            </a>
+            <a href="#estimate" class="nav-cta">Free Estimate</a>
+            <button class="nav-toggle" aria-label="Open menu" aria-expanded="false">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
     </nav>
 
-    <section class="hero">
-        <div class="hero-overlay"></div>
-        <div class="hero-content">
-            <span class="hero-eyebrow">Greater Joliet Area</span>
-            <h1>Landscaping That Transforms Your Property</h1>
-            <p class="hero-sub">Professional hardscaping, lawn care, and garden design — crafted to your vision and built to last.</p>
+    <!-- ===== HERO ===== -->
+    <header id="top" class="hero">
+        <div class="hero-copy">
+            <div class="hero-pill">
+                <span>Greater Joliet &middot; Family Owned Since 2020</span>
+            </div>
+            <h1>Landscapes that make the whole street <em>look up.</em></h1>
+            <p class="hero-sub">Hardscaping, lawn care, and garden design across the Greater Joliet area — crafted to your vision, built by a crew that treats your yard like their own.</p>
             <div class="hero-actions">
-                <a href="contact.html" class="btn btn-gold">Request a Free Estimate</a>
-                <a href="gallery.html" class="btn btn-outline-white">View Our Work</a>
+                <a href="#estimate" class="btn btn-ink">Request a Free Estimate</a>
+                <a href="#work" class="btn btn-ghost">View Our Work &rarr;</a>
+            </div>
+            <div class="hero-proof">
+                <div class="proof-item">
+                    <span class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+                    <span class="proof-label">5.0 on Google</span>
+                </div>
+                <div class="divider"></div>
+                <span class="proof-label">Licensed &amp; Insured</span>
             </div>
         </div>
-    </section>
+        <div class="hero-media">
+            <div class="hero-photo">
+                <img src="Pictures/harscape.jpg" alt="Tiered hardscape retaining walls and fresh landscaping" fetchpriority="high">
+            </div>
+            <div class="hero-badge">
+                <strong>200+</strong>
+                <span>yards transformed across the south suburbs</span>
+            </div>
+        </div>
+    </header>
 
-    <div class="stats-strip">
-        <div class="section-inner">
-            <div class="stats-grid">
-                <div class="stat">
-                    <strong>2020</strong>
-                    <span>Family Owned Since</span>
+    <!-- ===== TRUST STRIP ===== -->
+    <section class="trust">
+        <div class="wrap">
+            <div class="trust-grid">
+                <div class="trust-item">
+                    <strong>Est. 2020</strong>
+                    <span>Family Owned</span>
                 </div>
-                <div class="stat">
+                <div class="trust-item">
                     <strong>100%</strong>
                     <span>Licensed &amp; Insured</span>
                 </div>
-                <div class="stat">
+                <div class="trust-item">
                     <strong>Free</strong>
                     <span>On-Site Estimates</span>
                 </div>
-                <div class="stat">
-                    <strong>5&#9733;</strong>
-                    <span>Quality Workmanship</span>
+                <div class="trust-item">
+                    <strong>5.0 &#9733;</strong>
+                    <span>Google Rated</span>
                 </div>
             </div>
         </div>
-    </div>
+    </section>
 
-    <section class="services-preview">
-        <div class="section-inner">
-            <div class="section-header">
-                <h2>What We Do</h2>
-                <p>From routine maintenance to complete outdoor transformations</p>
+    <!-- ===== SERVICES ===== -->
+    <section id="services" class="section">
+        <div class="wrap">
+            <div class="section-head">
+                <div class="lede">
+                    <div class="eyebrow">What we do</div>
+                    <h2 class="h2">From weekly upkeep to full outdoor transformations.</h2>
+                </div>
+                <a href="#estimate" class="text-link">Get a quote &rarr;</a>
             </div>
             <div class="services-grid">
-                <div class="service-card">
+                <article class="service-card">
                     <div class="service-img">
-                        <img src="Pictures/IMG_2832.jpeg" alt="Lawn Care">
+                        <img loading="lazy" src="Pictures/C99BA7F3-55E8-4F41-AC5F-4F7C331CA5B2_1_105_c.jpeg" alt="Lawn Care">
+                        <div class="service-num">01</div>
                     </div>
                     <div class="service-body">
                         <h3>Lawn Care</h3>
-                        <p>Routine maintenance and expert care for a healthy, beautiful yard throughout every season.</p>
+                        <p>Routine mowing, edging, mulching, and seasonal cleanups that keep your yard healthy and sharp all season long.</p>
                     </div>
-                </div>
-                <div class="service-card">
+                </article>
+                <article class="service-card">
                     <div class="service-img">
-                        <img src="Pictures/4EAA0632-F39D-4230-A032-AE6E489353B1_1_105_c.jpeg" alt="Hardscaping">
+                        <img loading="lazy" src="Pictures/4EAA0632-F39D-4230-A032-AE6E489353B1_1_105_c.jpeg" alt="Hardscaping">
+                        <div class="service-num">02</div>
                     </div>
                     <div class="service-body">
                         <h3>Hardscaping</h3>
-                        <p>Patios, walkways, retaining walls, and custom outdoor features built with lasting quality.</p>
+                        <p>Paver patios, walkways, retaining walls, and stone beds — built level, built solid, and built to last for decades.</p>
                     </div>
-                </div>
-                <div class="service-card">
+                </article>
+                <article class="service-card">
                     <div class="service-img">
-                        <img src="Pictures/IMG_0479.jpeg" alt="Garden Design">
+                        <img loading="lazy" src="Pictures/2B5942AB-96D0-4FC7-8F40-EC6D67047F0E_1_105_c.jpeg" alt="Garden Design">
+                        <div class="service-num">03</div>
                     </div>
                     <div class="service-body">
                         <h3>Garden Design</h3>
-                        <p>Custom landscaping plans tailored to your vision, property, and long-term goals.</p>
+                        <p>Custom planting plans, fresh beds, and curb-appeal makeovers tailored to your property and your vision.</p>
+                    </div>
+                </article>
+                <article class="service-card">
+                    <div class="service-img">
+                        <img loading="lazy" src="Pictures/IMG_0479.jpeg" alt="Mulching and sod installation">
+                        <div class="service-num">04</div>
+                    </div>
+                    <div class="service-body">
+                        <h3>Mulching &amp; Sod</h3>
+                        <p>Fresh mulch, crisp bed edging, and new sod that give your yard a clean, finished look the day we're done.</p>
+                    </div>
+                </article>
+                <article class="service-card">
+                    <div class="service-img">
+                        <img loading="lazy" src="Pictures/IMG_2052.jpeg" alt="Seasonal cleanup and lawn maintenance">
+                        <div class="service-num">05</div>
+                    </div>
+                    <div class="service-body">
+                        <h3>Seasonal Clean-Up</h3>
+                        <p>Spring and fall cleanups, leaf removal, pruning, and debris hauling to keep your property sharp through every season.</p>
+                    </div>
+                </article>
+                <article class="service-card">
+                    <div class="service-img">
+                        <img loading="lazy" src="Pictures/IMG_1402.jpeg" alt="Retaining wall construction">
+                        <div class="service-num">06</div>
+                    </div>
+                    <div class="service-body">
+                        <h3>Retaining Walls</h3>
+                        <p>Engineered block and stone walls that hold back grade, fight erosion, and turn sloped yards into usable space.</p>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== SELECTED WORK ===== -->
+    <section id="work" class="work section">
+        <div class="wrap">
+            <div class="section-head">
+                <div class="lede">
+                    <div class="eyebrow eyebrow--light">Selected work</div>
+                    <h2 class="h2">Real yards. Real neighbors. Real fresh.</h2>
+                </div>
+                <p>Every project below is a home right here in the Joliet area — no stock photos, just our crew's work.</p>
+            </div>
+            <div class="work-grid">
+                <figure>
+                    <img loading="lazy" src="Pictures/harscape.jpg" alt="Tiered hardscape and terraced beds">
+                    <figcaption>Tiered hardscape &amp; terraced beds</figcaption>
+                </figure>
+                <figure>
+                    <img loading="lazy" src="Pictures/4EAA0632-F39D-4230-A032-AE6E489353B1_1_105_c.jpeg" alt="Curved paver border and rock bed">
+                    <figcaption>Curved paver border &amp; rock bed</figcaption>
+                </figure>
+                <figure>
+                    <img loading="lazy" src="Pictures/C4DDE0E6-DDD4-4632-A4AB-FDE9A67CF3D8_1_105_c.jpeg" alt="Fresh sod and clean edging">
+                    <figcaption>Fresh sod &amp; clean edging</figcaption>
+                </figure>
+                <figure>
+                    <img loading="lazy" src="Pictures/B39896BF-F95F-4A8A-976D-0DCDB38FA13C_1_105_c.jpeg" alt="Wraparound retaining wall">
+                    <figcaption>Wraparound retaining wall</figcaption>
+                </figure>
+                <figure>
+                    <img loading="lazy" src="Pictures/F519D658-EC34-4314-B67E-E04724938170_1_105_c.jpeg" alt="Front-yard transformation">
+                    <figcaption>Front-yard transformation</figcaption>
+                </figure>
+                <figure>
+                    <img loading="lazy" src="Pictures/IMG_0396.jpeg" alt="Unilock brick paver patio">
+                    <figcaption>Unilock brick paver patio</figcaption>
+                </figure>
+                <figure>
+                    <img loading="lazy" src="Pictures/IMG_1446.jpeg" alt="Backyard pool waterfall feature">
+                    <figcaption>Pool waterfall feature</figcaption>
+                </figure>
+                <figure>
+                    <img loading="lazy" src="Pictures/IMG_0473.jpeg" alt="Decorative rock and boulder bed">
+                    <figcaption>Decorative rock &amp; boulders</figcaption>
+                </figure>
+                <figure>
+                    <img loading="lazy" src="Pictures/IMG_1403.jpeg" alt="Retaining wall detail">
+                    <figcaption>Retaining wall detail</figcaption>
+                </figure>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== REVIEWS ===== -->
+    <section id="reviews" class="section">
+        <div class="wrap">
+            <div class="reviews-head">
+                <div class="eyebrow">Loved by the neighborhood</div>
+                <h2 class="h2">What homeowners say.</h2>
+            </div>
+            <div class="reviews-grid">
+                <blockquote class="review-card">
+                    <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+                    <p>"I got a call within an hour and he came same day for a free estimate. Two days later the work was done — exactly what I asked for, and extremely professional."</p>
+                    <cite>— Jory R.</cite>
+                </blockquote>
+                <blockquote class="review-card">
+                    <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+                    <p>"Prompt, friendly, and such hard workers. They removed old bushes and planted eleven new ones — it changed the whole appearance of our house. We'll be calling them again."</p>
+                    <cite>— Barbara R.</cite>
+                </blockquote>
+                <blockquote class="review-card">
+                    <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+                    <p>"Efren and his crew handled a substantial spring clean-up with remarkable efficiency. Fast, respectful, fair pricing, and our property looked beautifully refreshed."</p>
+                    <cite>— Joseph A.</cite>
+                </blockquote>
+            </div>
+            <div class="reviews-foot">Rated <strong>5.0</strong> across Google reviews &middot; <a href="#estimate">Get your free estimate &rarr;</a></div>
+        </div>
+    </section>
+
+    <!-- ===== ABOUT / CTA BAND ===== -->
+    <section id="about" class="band-section">
+        <div class="band">
+            <div class="band-grid">
+                <div class="band-copy">
+                    <div class="eyebrow eyebrow--light">Family owned &amp; operated</div>
+                    <h2>Ready to transform your outdoor space?</h2>
+                    <p>Tell us about your project and we'll come out for a free, no-pressure on-site estimate — usually same week. Fully licensed, insured, and dependable from the first call to the final cleanup.</p>
+                    <div class="band-actions">
+                        <a href="tel:8152124526" class="btn btn-leaf">Call 815&middot;212&middot;4526</a>
+                        <a href="#estimate" class="btn btn-ghost-light">Request online</a>
+                    </div>
+                    <div class="band-hours">
+                        <div><strong>Mon&ndash;Fri</strong><span>7:00a &ndash; 4:30p</span></div>
+                        <div class="divider"></div>
+                        <div><strong>Sat</strong><span>7:00a &ndash; 12:00p</span></div>
                     </div>
                 </div>
-            </div>
-            <div class="services-preview-cta">
-                <a href="services.html" class="btn btn-outline">View All Services</a>
-            </div>
-        </div>
-    </section>
-
-    <section class="reviews-section">
-        <div class="section-inner">
-            <div class="section-header">
-                <h2>What Our Customers Say</h2>
-                <p>Real feedback from homeowners across the Greater Joliet area</p>
-            </div>
-            <div class="reviews-track">
-                <div class="review-slide active">
-                    <div class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-                    <blockquote class="review-text">"They showed up on time, were very efficient, and finished the job in under three hours! Hard working crew!!!"</blockquote>
-                    <cite class="review-author">— Don W.</cite>
-                </div>
-                <div class="review-slide">
-                    <div class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-                    <blockquote class="review-text">"The team was great! They were prompt, friendly, and such hard workers! We were very pleased with all that they did — removed two very large bushes, two smaller ones, and a huge evergreen tree which had been blocking our view of the street. They planted eleven smaller bushes, which changed the appearance of our house greatly! They cleaned up everything, hauled it all away, and finished the project in about four hours! They are so good at what they do — we will be calling them again for sure!"</blockquote>
-                    <cite class="review-author">— Barbara R.</cite>
-                </div>
-                <div class="review-slide">
-                    <div class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-                    <blockquote class="review-text">"We wanted to extend a patio and make a walkway with rock. I got a call within an hour and he came same day to do a free estimate. I hired him the next day and two days later, the work was done! Exactly what I asked for, and he and his workers were extremely professional. We will for sure hire them again for our next project! Thank you!"</blockquote>
-                    <cite class="review-author">— Jory R.</cite>
-                </div>
-                <div class="review-slide">
-                    <div class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-                    <blockquote class="review-text">"They did a fantastic job! They were prompt in responding and super helpful with the planning of our project. We had made a few changes and they were very accommodating. The final result came out even better than we imagined! We will be using Real Fresh for future projects and highly recommend them!"</blockquote>
-                    <cite class="review-author">— Jason M.</cite>
-                </div>
-                <div class="review-slide">
-                    <div class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-                    <blockquote class="review-text">"We were thoroughly impressed with Efren and his crew's work on our large, heavily wooded acre. The spring clean-up was substantial, but they handled it with remarkable efficiency and meticulous attention to detail. From the thorough leaf removal to the precise edging and expert mulching, every aspect was completed to a high standard. Efren was also incredibly accommodating, working with our schedule and specific requests. His team was fast, respectful, and left our property looking beautifully refreshed. The pricing was fair, and we're excited to work with them again in the future."</blockquote>
-                    <cite class="review-author">— Joseph A.</cite>
-                </div>
-                <div class="review-slide">
-                    <div class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-                    <blockquote class="review-text">"The company responded minutes after I requested the quote around 7:00AM. By 11:00AM, he had been to my house, provided the quote, and completed the work, which looks great. We have an electric mower, which works well except when you want a closer mow with mulching at the end of the growing season, which they were able to do quickly and efficiently."</blockquote>
-                    <cite class="review-author">— Erika G.</cite>
-                </div>
-            </div>
-            <div class="reviews-dots">
-                <button class="dot active" aria-label="Review 1"></button>
-                <button class="dot" aria-label="Review 2"></button>
-                <button class="dot" aria-label="Review 3"></button>
-                <button class="dot" aria-label="Review 4"></button>
-                <button class="dot" aria-label="Review 5"></button>
-                <button class="dot" aria-label="Review 6"></button>
-            </div>
-        </div>
-    </section>
-
-    <section class="cta-section">
-        <div class="section-inner">
-            <div class="cta-inner">
-                <div class="cta-copy">
-                    <h2>Ready to Transform Your Outdoor Space?</h2>
-                    <p>Serving the Greater Joliet area with professional results and dependable, friendly service. Our crews are fully licensed and insured, using quality materials on every project — big or small.</p>
-                    <a href="contact.html" class="btn btn-gold">Schedule a Free Estimate</a>
-                </div>
-                <div class="cta-image">
-                    <img src="Pictures/IMG_1401.jpeg" alt="Our landscaping work">
+                <div class="band-photo">
+                    <img loading="lazy" src="Pictures/2B5942AB-96D0-4FC7-8F40-EC6D67047F0E_1_105_c.jpeg" alt="Finished landscaping project">
                 </div>
             </div>
         </div>
     </section>
 
+    <!-- ===== ESTIMATE FORM ===== -->
+    <section id="estimate" class="estimate section">
+        <div class="wrap">
+            <div class="estimate-head">
+                <div class="eyebrow">Free estimate</div>
+                <h2 class="h2">Tell us about your project.</h2>
+                <p>Fill out the form and we'll get back to you within 24 hours — usually sooner.</p>
+            </div>
+            <div class="form-card">
+                <form action="https://formspree.io/f/mjknoqep" class="est-form" target="_top" method="POST">
+                    <div class="form-row">
+                        <div class="field">
+                            <label for="name">Name</label>
+                            <input id="name" name="name" required placeholder="Your full name" />
+                        </div>
+                        <div class="field">
+                            <label for="email">Email Address</label>
+                            <input id="email" name="email" type="email" required placeholder="your@email.com" />
+                        </div>
+                    </div>
+                    <div class="field">
+                        <label for="number">Phone Number</label>
+                        <input id="number" name="number" type="tel" placeholder="(000) 000-0000" />
+                    </div>
+                    <div class="field">
+                        <label>Preferred Contact Method</label>
+                        <div class="pill-group">
+                            <label class="pill">
+                                <input type="radio" name="contact_method" value="Email" checked>
+                                <span>Email</span>
+                            </label>
+                            <label class="pill">
+                                <input type="radio" name="contact_method" value="Call">
+                                <span>Call</span>
+                            </label>
+                            <label class="pill">
+                                <input type="radio" name="contact_method" value="Text">
+                                <span>Text</span>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="field">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" required placeholder="Tell us about your project..."></textarea>
+                    </div>
+                    <button class="btn btn-leaf form-submit" type="submit">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== FOOTER ===== -->
     <footer>
         <div class="footer-inner">
             <div class="footer-brand">
-                <h3>Real-Fresh Landscaping</h3>
-                <p>Professional landscaping and hardscaping in the Greater Joliet area. Family owned and operated since 2020.</p>
+                <img loading="lazy" src="Pictures/REAL FRESH LOGO.png" alt="Real Fresh Landscaping">
+                <p>Professional landscaping &amp; hardscaping in the Greater Joliet area. Family owned and operated since 2020.</p>
                 <div class="footer-social">
-                    <a href="https://www.facebook.com/people/Real-Fresh-Landscaping/100088041076726/" target="_blank" rel="noopener noreferrer">
-                        <img src="https://cdn-icons-png.flaticon.com/512/733/733547.png" alt="Facebook">
+                    <a href="https://www.facebook.com/people/Real-Fresh-Landscaping/100088041076726/" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+                        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M24 12.07C24 5.41 18.63 0 12 0S0 5.4 0 12.07C0 18.1 4.39 23.1 10.13 24v-8.44H7.08v-3.49h3.04V9.41c0-3.02 1.8-4.7 4.54-4.7 1.31 0 2.68.24 2.68.24v2.97h-1.5c-1.5 0-1.96.93-1.96 1.89v2.26h3.32l-.53 3.5h-2.8V24C19.62 23.1 24 18.1 24 12.07"/></svg>
                     </a>
-                    <a href="https://www.instagram.com/realfreshlandscaping/" target="_blank" rel="noopener noreferrer">
-                        <img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" alt="Instagram">
+                    <a href="https://www.instagram.com/realfreshlandscaping/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+                        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.16c3.2 0 3.58.01 4.85.07 1.17.05 1.8.25 2.23.41.56.22.96.48 1.38.9.42.42.68.82.9 1.38.16.42.36 1.06.41 2.23.06 1.27.07 1.65.07 4.85s-.01 3.58-.07 4.85c-.05 1.17-.25 1.8-.41 2.23-.22.56-.48.96-.9 1.38-.42.42-.82.68-1.38.9-.42.16-1.06.36-2.23.41-1.27.06-1.65.07-4.85.07s-3.58-.01-4.85-.07c-1.17-.05-1.8-.25-2.23-.41a3.72 3.72 0 0 1-1.38-.9 3.72 3.72 0 0 1-.9-1.38c-.16-.42-.36-1.06-.41-2.23-.06-1.27-.07-1.65-.07-4.85s.01-3.58.07-4.85c.05-1.17.25-1.8.41-2.23.22-.56.48-.96.9-1.38.42-.42.82-.68 1.38-.9.42-.16 1.06-.36 2.23-.41C8.42 2.17 8.8 2.16 12 2.16M12 0C8.74 0 8.33.01 7.05.07 5.78.13 4.9.33 4.14.63a5.88 5.88 0 0 0-2.13 1.39A5.88 5.88 0 0 0 .63 4.14C.33 4.9.13 5.78.07 7.05.01 8.33 0 8.74 0 12s.01 3.67.07 4.95c.06 1.27.26 2.15.56 2.91.31.79.72 1.46 1.39 2.13a5.88 5.88 0 0 0 2.13 1.39c.76.3 1.64.5 2.91.56 1.28.06 1.69.07 4.95.07s3.67-.01 4.95-.07c1.27-.06 2.15-.26 2.91-.56a5.88 5.88 0 0 0 2.13-1.39 5.88 5.88 0 0 0 1.39-2.13c.3-.76.5-1.64.56-2.91.06-1.28.07-1.69.07-4.95s-.01-3.67-.07-4.95c-.06-1.27-.26-2.15-.56-2.91a5.88 5.88 0 0 0-1.39-2.13A5.88 5.88 0 0 0 19.86.63c-.76-.3-1.64-.5-2.91-.56C15.67.01 15.26 0 12 0"/><circle cx="18.41" cy="5.59" r="1.44"/><path d="M12 5.84A6.16 6.16 0 1 0 18.16 12 6.16 6.16 0 0 0 12 5.84M12 16a4 4 0 1 1 4-4 4 4 0 0 1-4 4"/></svg>
                     </a>
                 </div>
             </div>
             <div class="footer-col">
-                <h4>Navigation</h4>
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="about.html">About</a></li>
-                    <li><a href="services.html">Services</a></li>
-                    <li><a href="gallery.html">Gallery</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                </ul>
+                <h4>Explore</h4>
+                <div class="col-links">
+                    <a href="#work">Our Work</a>
+                    <a href="#services">Services</a>
+                    <a href="#reviews">Reviews</a>
+                    <a href="#about">About Us</a>
+                </div>
             </div>
             <div class="footer-col">
-                <h4>Hours of Operation</h4>
-                <ul>
-                    <li>Mon &ndash; Fri: 7:00 AM &ndash; 4:30 PM</li>
-                    <li>Saturday: 7:00 AM &ndash; 12:00 PM</li>
-                    <li>Sunday: Closed</li>
-                </ul>
-                <div class="footer-col-gap">
-                    <h4>Contact</h4>
-                    <ul>
-                        <li><a href="tel:8152124526">815-212-4526</a></li>
-                        <li><a href="contact.html">Request an Estimate</a></li>
-                    </ul>
+                <h4>Hours</h4>
+                <div class="col-links">
+                    <span>Mon &ndash; Fri: 7:00a &ndash; 4:30p</span>
+                    <span>Saturday: 7:00a &ndash; 12:00p</span>
+                    <span>Sunday: Closed</span>
+                </div>
+            </div>
+            <div class="footer-col">
+                <h4>Contact</h4>
+                <div class="col-links">
+                    <a href="tel:8152124526" class="phone">815&middot;212&middot;4526</a>
+                    <a href="#estimate">Request an Estimate</a>
+                    <span>Greater Joliet, IL</span>
                 </div>
             </div>
         </div>
         <div class="footer-bottom">
-            &copy; 2025 Real-Fresh Landscaping LLC. All rights reserved.
+            &copy; 2026 Real-Fresh Landscaping LLC. All rights reserved.
         </div>
     </footer>
 
-
-    <script>
-        const slides = document.querySelectorAll('.review-slide');
-        const dots   = document.querySelectorAll('.dot');
-        let current  = 0;
-        let timer;
-
-        function goTo(n) {
-            slides[current].classList.remove('active');
-            dots[current].classList.remove('active');
-            current = (n + slides.length) % slides.length;
-            slides[current].classList.add('active');
-            dots[current].classList.add('active');
-        }
-
-        function next() { goTo(current + 1); }
-
-        function startTimer() { timer = setInterval(next, 9000); }
-        function stopTimer()  { clearInterval(timer); }
-
-        dots.forEach((dot, i) => {
-            dot.addEventListener('click', () => { goTo(i); stopTimer(); startTimer(); });
-        });
-
-        document.querySelector('.reviews-track').addEventListener('mouseenter', stopTimer);
-        document.querySelector('.reviews-track').addEventListener('mouseleave', startTimer);
-
-        startTimer();
-    </script>
-
     <div class="mobile-bar">
         <a href="tel:8152124526" class="mobile-bar-call">Call Now</a>
-        <a href="contact.html" class="mobile-bar-estimate">Free Estimate</a>
+        <a href="#estimate" class="mobile-bar-estimate">Free Estimate</a>
     </div>
-    <script src="app.js"></script>
+
+    <script>
+        // ── Hamburger nav ──
+        const navToggle = document.querySelector('.nav-toggle');
+        const navLinks  = document.querySelector('.nav-links');
+
+        navToggle.addEventListener('click', () => {
+            const open = navLinks.classList.toggle('open');
+            navToggle.classList.toggle('open', open);
+            navToggle.setAttribute('aria-expanded', String(open));
+        });
+
+        navLinks.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                navLinks.classList.remove('open');
+                navToggle.classList.remove('open');
+                navToggle.setAttribute('aria-expanded', 'false');
+            });
+        });
+
+        // ── Scroll reveal ──
+        const revealMap = [
+            ['.trust-item',          true ],
+            ['.section-head',        false],
+            ['.reviews-head',        false],
+            ['.estimate-head',       false],
+            ['.service-card',        true ],
+            ['.work-grid figure',    true ],
+            ['.review-card',         true ],
+            ['.band',                false],
+            ['.form-card',           false],
+        ];
+
+        const revealObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (!entry.isIntersecting) return;
+                entry.target.classList.add('is-visible');
+                setTimeout(() => {
+                    entry.target.removeAttribute('data-reveal');
+                    entry.target.style.transitionDelay = '';
+                }, 1000);
+                revealObserver.unobserve(entry.target);
+            });
+        }, { threshold: 0.12 });
+
+        revealMap.forEach(([sel, stagger]) => {
+            document.querySelectorAll(sel).forEach((el, i) => {
+                el.setAttribute('data-reveal', '');
+                if (stagger && i > 0) el.style.transitionDelay = `${Math.min(i, 3) * 0.09}s`;
+                revealObserver.observe(el);
+            });
+        });
+    </script>
 </body>
 </html>

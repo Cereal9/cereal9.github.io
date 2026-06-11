@@ -1,0 +1,27 @@
+# macOS
+.DS_Store
+._*
+.AppleDouble
+.LSOverride
+
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# Editors / IDEs
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Node (in case build tooling is added later)
+node_modules/
+
+# Claude Design source docs (not meant to be published)
+*.dc.html
+
+# Logs & temp files
+*.log
+*.tmp
