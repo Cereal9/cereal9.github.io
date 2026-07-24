@@ -26,842 +26,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,600;12..96,700;12..96,800&family=Hanken+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="icon" type="image/png" href="Pictures/RF logo.png">
 
-<style>
-:root {
-  --ink: #14271b;
-  --forest: #1f3d2b;
-  --forest2: #2a5238;
-  --leaf: #7cb342;
-  --leaf-deep: #5d8a2e;
-  --bone: #f7f5ef;
-  --stone: #ece7da;
-  --line: #e4dfd2;
-  --muted: #5f6b5e;
-  --text: #1b211a;
-}
-
-*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-
-html { scroll-behavior: smooth; }
-
-body {
-  font-family: 'Hanken Grotesk', sans-serif;
-  color: var(--text);
-  background: var(--bone);
-  line-height: 1.6;
-  overflow-x: hidden;
-  -webkit-font-smoothing: antialiased;
-}
-
-img { display: block; max-width: 100%; }
-
-::selection { background: var(--leaf); color: var(--ink); }
-
-a:focus-visible,
-button:focus-visible {
-  outline: 2px solid var(--leaf-deep);
-  outline-offset: 3px;
-}
-
-h1, h2, h3 { font-family: 'Bricolage Grotesque', sans-serif; color: var(--ink); }
-
-.wrap {
-  max-width: 1240px;
-  margin: 0 auto;
-  padding-left: clamp(20px, 5vw, 56px);
-  padding-right: clamp(20px, 5vw, 56px);
-}
-
-.eyebrow {
-  font-size: 12.5px;
-  font-weight: 700;
-  letter-spacing: 0.16em;
-  text-transform: uppercase;
-  color: var(--leaf-deep);
-  margin-bottom: 14px;
-}
-
-.eyebrow--light { color: var(--leaf); }
-
-.h2 {
-  font-weight: 700;
-  font-size: clamp(30px, 4vw, 46px);
-  line-height: 1.05;
-  letter-spacing: -0.02em;
-}
-
-/* ─── BUTTONS ─── */
-
-.btn {
-  display: inline-block;
-  text-decoration: none;
-  font-family: inherit;
-  font-weight: 700;
-  font-size: 16px;
-  padding: 16px 30px;
-  border-radius: 999px;
-  border: none;
-  cursor: pointer;
-  transition: transform 0.18s ease, box-shadow 0.18s ease, background 0.18s ease, border-color 0.18s ease;
-}
-
-.btn-ink { background: var(--ink); color: #fff; }
-.btn-ink:hover { transform: translateY(-2px); box-shadow: 0 14px 30px rgba(20,39,27,0.28); }
-
-.btn-leaf { background: var(--leaf); color: var(--ink); }
-.btn-leaf:hover { transform: translateY(-2px); box-shadow: 0 14px 30px rgba(124,179,66,0.4); }
-
-.btn-ghost { background: transparent; color: var(--ink); border: 1.5px solid rgba(20,39,27,0.22); padding: 16px 28px; }
-.btn-ghost:hover { border-color: var(--ink); background: rgba(20,39,27,0.04); }
-
-.btn-ghost-light { background: transparent; color: #fff; border: 1.5px solid rgba(255,255,255,0.5); padding: 16px 24px; }
-.btn-ghost-light:hover { background: rgba(255,255,255,0.12); }
-
-.text-link {
-  text-decoration: none;
-  color: var(--ink);
-  font-weight: 700;
-  font-size: 15px;
-  border-bottom: 2px solid var(--leaf);
-  padding-bottom: 3px;
-  white-space: nowrap;
-  transition: color 0.18s ease;
-}
-
-.text-link:hover { color: var(--leaf-deep); }
-
-/* ─── NAV ─── */
-
-nav {
-  position: sticky;
-  top: 0;
-  z-index: 50;
-  display: flex;
-  align-items: center;
-  gap: 32px;
-  padding: 14px clamp(20px, 5vw, 56px);
-  background: rgba(247, 245, 239, 0.82);
-  backdrop-filter: blur(14px);
-  -webkit-backdrop-filter: blur(14px);
-  border-bottom: 1px solid var(--line);
-}
-
-.nav-logo { display: flex; align-items: center; margin-right: auto; text-decoration: none; }
-.nav-logo img { height: 46px; width: auto; }
-
-.nav-links { display: flex; align-items: center; gap: 30px; }
-
-.nav-links a {
-  text-decoration: none;
-  color: var(--ink);
-  font-weight: 500;
-  font-size: 15px;
-  letter-spacing: 0.01em;
-  transition: color 0.18s ease;
-}
-
-.nav-links a:hover { color: var(--leaf-deep); }
-
-.nav-right { display: flex; align-items: center; gap: 18px; }
-
-.nav-phone {
-  text-decoration: none;
-  color: var(--forest);
-  font-weight: 700;
-  font-size: 15px;
-  letter-spacing: 0.01em;
-  display: flex;
-  align-items: center;
-  gap: 7px;
-}
-
-.nav-phone .pulse {
-  display: inline-block;
-  width: 7px;
-  height: 7px;
-  border-radius: 50%;
-  background: var(--leaf);
-  box-shadow: 0 0 0 3px rgba(124,179,66,0.22);
-}
-
-.nav-cta {
-  text-decoration: none;
-  background: var(--leaf);
-  color: var(--ink);
-  font-weight: 700;
-  font-size: 14.5px;
-  padding: 11px 20px;
-  border-radius: 999px;
-  letter-spacing: 0.01em;
-  white-space: nowrap;
-  transition: transform 0.18s ease, box-shadow 0.18s ease, background 0.18s ease, color 0.18s ease;
-}
-
-.nav-cta:hover {
-  background: var(--leaf-deep);
-  color: #fff;
-  transform: translateY(-1px);
-  box-shadow: 0 8px 22px rgba(124,179,66,0.35);
-}
-
-.nav-toggle {
-  display: none;
-  flex-direction: column;
-  justify-content: space-between;
-  width: 24px;
-  height: 18px;
-  background: none;
-  border: none;
-  cursor: pointer;
-  flex-shrink: 0;
-}
-
-.nav-toggle span {
-  display: block;
-  width: 100%;
-  height: 2px;
-  background: var(--ink);
-  border-radius: 2px;
-  transition: transform 0.28s ease, opacity 0.2s;
-}
-
-.nav-toggle.open span:nth-child(1) { transform: translateY(8px) rotate(45deg); }
-.nav-toggle.open span:nth-child(2) { opacity: 0; }
-.nav-toggle.open span:nth-child(3) { transform: translateY(-8px) rotate(-45deg); }
-
-/* ─── HERO ─── */
-
-.hero {
-  display: grid;
-  grid-template-columns: 1.05fr 1fr;
-  gap: clamp(28px, 5vw, 72px);
-  align-items: center;
-  max-width: 1240px;
-  margin: 0 auto;
-  padding: clamp(40px, 7vw, 92px) clamp(20px, 5vw, 56px) clamp(36px, 5vw, 64px);
-}
-
-.hero-pill {
-  display: inline-flex;
-  align-items: center;
-  gap: 10px;
-  padding: 7px 15px;
-  border-radius: 999px;
-  background: rgba(124,179,66,0.12);
-  border: 1px solid rgba(124,179,66,0.3);
-  margin-bottom: 26px;
-}
-
-.hero-pill span {
-  font-size: 12px;
-  font-weight: 700;
-  letter-spacing: 0.14em;
-  text-transform: uppercase;
-  color: var(--leaf-deep);
-}
-
-.hero h1 {
-  font-weight: 700;
-  font-size: clamp(40px, 6vw, 72px);
-  line-height: 1.02;
-  letter-spacing: -0.02em;
-  margin-bottom: 22px;
-  text-wrap: balance;
-}
-
-.hero h1 em { font-style: normal; color: var(--leaf-deep); }
-
-.hero-sub {
-  font-size: clamp(16px, 1.7vw, 19px);
-  color: var(--muted);
-  max-width: 30em;
-  margin-bottom: 34px;
-  line-height: 1.6;
-}
-
-.hero-actions { display: flex; flex-wrap: wrap; gap: 14px; margin-bottom: 38px; }
-
-.hero-proof { display: flex; gap: 28px; flex-wrap: wrap; align-items: center; }
-.hero-proof .stars { color: var(--leaf); font-size: 17px; letter-spacing: 2px; }
-.hero-proof .proof-item { display: flex; align-items: center; gap: 9px; }
-.hero-proof .proof-label { font-size: 14px; color: var(--muted); font-weight: 600; }
-.hero-proof .divider { width: 1px; height: 22px; background: var(--line); }
-
-.hero-media { position: relative; }
-
-.hero-photo {
-  position: relative;
-  border-radius: 22px;
-  overflow: hidden;
-  box-shadow: 0 30px 70px -20px rgba(20,39,27,0.45);
-  aspect-ratio: 4 / 4.4;
-}
-
-.hero-photo img { width: 100%; height: 100%; object-fit: cover; }
-
-.hero-badge {
-  position: absolute;
-  left: -18px;
-  bottom: 34px;
-  background: #fff;
-  border-radius: 16px;
-  padding: 16px 22px;
-  box-shadow: 0 18px 40px -12px rgba(20,39,27,0.35);
-  display: flex;
-  align-items: center;
-  gap: 14px;
-}
-
-.hero-badge strong {
-  font-family: 'Bricolage Grotesque', sans-serif;
-  font-weight: 800;
-  font-size: 30px;
-  color: var(--leaf-deep);
-  line-height: 1;
-}
-
-.hero-badge span {
-  font-size: 12.5px;
-  font-weight: 600;
-  color: var(--muted);
-  line-height: 1.3;
-  max-width: 9em;
-}
-
-@keyframes heroRise {
-  from { opacity: 0; transform: translateY(26px); }
-  to   { opacity: 1; transform: none; }
-}
-
-.hero-copy > *  { animation: heroRise 0.7s ease both; }
-.hero h1        { animation-delay: 0.08s; }
-.hero-sub       { animation-delay: 0.16s; }
-.hero-actions   { animation-delay: 0.24s; }
-.hero-proof     { animation-delay: 0.32s; }
-.hero-media     { animation: heroRise 0.8s ease 0.2s both; }
-
-/* ─── TRUST STRIP ─── */
-
-.trust {
-  border-top: 1px solid var(--line);
-  border-bottom: 1px solid var(--line);
-  background: #fff;
-}
-
-.trust-grid { display: grid; grid-template-columns: repeat(4, 1fr); }
-
-.trust-item { padding: 30px 18px; text-align: center; }
-.trust-item + .trust-item { border-left: 1px solid var(--line); }
-
-.trust-item strong {
-  display: block;
-  font-family: 'Bricolage Grotesque', sans-serif;
-  font-weight: 800;
-  font-size: clamp(24px, 2.6vw, 32px);
-  color: var(--ink);
-  line-height: 1;
-  margin-bottom: 8px;
-}
-
-.trust-item span {
-  font-size: 12px;
-  font-weight: 700;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  color: var(--muted);
-}
-
-/* ─── SECTIONS ─── */
-
-.section { padding: clamp(60px, 8vw, 104px) 0; }
-
-.section-head {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-end;
-  flex-wrap: wrap;
-  gap: 20px;
-  margin-bottom: 44px;
-}
-
-.section-head .lede { max-width: 34em; }
-
-/* ─── SERVICES ─── */
-
-.services-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
-
-.service-card {
-  background: #fff;
-  border-radius: 18px;
-  overflow: hidden;
-  border: 1px solid var(--line);
-  transition: transform 0.25s ease, box-shadow 0.25s ease;
-}
-
-.service-card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 24px 50px -22px rgba(20,39,27,0.4);
-}
-
-.service-img { position: relative; height: 220px; overflow: hidden; }
-.service-img img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.4s ease; }
-.service-card:hover .service-img img { transform: scale(1.05); }
-
-.service-num {
-  position: absolute;
-  top: 14px;
-  left: 14px;
-  width: 34px;
-  height: 34px;
-  border-radius: 50%;
-  background: rgba(247,245,239,0.92);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-family: 'Bricolage Grotesque', sans-serif;
-  font-weight: 800;
-  font-size: 14px;
-  color: var(--leaf-deep);
-}
-
-.service-body { padding: 24px 24px 28px; }
-
-.service-body h3 {
-  font-weight: 700;
-  font-size: 21px;
-  margin-bottom: 10px;
-  letter-spacing: -0.01em;
-}
-
-.service-body p { font-size: 14.5px; color: var(--muted); line-height: 1.62; }
-
-/* ─── SELECTED WORK ─── */
-
-.work { background: var(--ink); color: #fff; }
-.work .h2 { color: #fff; }
-.work .section-head p { font-size: 15px; color: rgba(255,255,255,0.6); max-width: 24em; }
-
-.work-grid {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  grid-auto-rows: 200px;
-  gap: 14px;
-}
-
-.work-grid figure { position: relative; border-radius: 14px; overflow: hidden; }
-.work-grid figure:first-child { grid-column: span 2; grid-row: span 2; }
-
-.work-grid img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.4s ease; }
-.work-grid figure:hover img { transform: scale(1.05); }
-
-.work-grid figcaption {
-  position: absolute;
-  left: 0; right: 0; bottom: 0;
-  padding: 14px 16px;
-  background: linear-gradient(180deg, transparent, rgba(13,24,16,0.78));
-  color: #fff;
-  font-size: 13px;
-  font-weight: 600;
-  letter-spacing: 0.01em;
-}
-
-/* ─── REVIEWS ─── */
-
-.reviews-head { text-align: center; max-width: 34em; margin: 0 auto 48px; }
-
-.reviews-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
-
-.review-card {
-  background: #fff;
-  border: 1px solid var(--line);
-  border-radius: 18px;
-  padding: 30px 28px;
-  display: flex;
-  flex-direction: column;
-}
-
-.review-card .stars { color: var(--leaf); font-size: 16px; letter-spacing: 2px; margin-bottom: 18px; }
-.review-card p { font-size: 16px; line-height: 1.6; margin-bottom: 22px; font-weight: 500; }
-
-.review-card cite {
-  margin-top: auto;
-  font-style: normal;
-  font-weight: 700;
-  font-size: 14px;
-  color: var(--ink);
-  letter-spacing: 0.02em;
-}
-
-.reviews-foot { text-align: center; margin-top: 36px; font-size: 14px; color: var(--muted); }
-.reviews-foot strong { color: var(--ink); }
-
-.reviews-foot a {
-  color: var(--leaf-deep);
-  font-weight: 700;
-  text-decoration: none;
-  border-bottom: 2px solid rgba(124,179,66,0.4);
-}
-
-/* ─── ABOUT / CTA BAND ─── */
-
-.band-section { padding: 0 clamp(20px, 5vw, 56px) clamp(60px, 8vw, 100px); }
-
-.band {
-  position: relative;
-  max-width: 1240px;
-  margin: 0 auto;
-  border-radius: 26px;
-  overflow: hidden;
-  background: var(--forest);
-}
-
-.band-grid { display: grid; grid-template-columns: 1.1fr 1fr; align-items: stretch; }
-
-.band-copy { padding: clamp(36px, 5vw, 72px); color: #fff; }
-
-.band-copy h2 {
-  font-weight: 700;
-  font-size: clamp(28px, 3.6vw, 44px);
-  line-height: 1.06;
-  letter-spacing: -0.02em;
-  margin-bottom: 18px;
-  color: #fff;
-}
-
-.band-copy > p {
-  font-size: 16px;
-  line-height: 1.7;
-  color: rgba(255,255,255,0.78);
-  margin-bottom: 32px;
-  max-width: 32em;
-}
-
-.band-actions { display: flex; flex-wrap: wrap; gap: 14px; align-items: center; }
-
-.band-hours { display: flex; gap: 26px; margin-top: 34px; flex-wrap: wrap; }
-.band-hours .divider { width: 1px; background: rgba(255,255,255,0.18); }
-
-.band-hours strong {
-  display: block;
-  font-family: 'Bricolage Grotesque', sans-serif;
-  font-weight: 800;
-  font-size: 22px;
-  color: #fff;
-}
-
-.band-hours span { font-size: 13px; color: rgba(255,255,255,0.6); }
-
-.band-photo { position: relative; min-height: 340px; }
-.band-photo img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
-
-/* ─── ESTIMATE FORM ─── */
-
-.estimate { background: #fff; border-top: 1px solid var(--line); }
-
-.estimate-head { text-align: center; max-width: 34em; margin: 0 auto 44px; }
-.estimate-head p { color: var(--muted); margin-top: 14px; }
-
-.form-card {
-  background: var(--bone);
-  border: 1px solid var(--line);
-  border-radius: 26px;
-  padding: clamp(28px, 4vw, 52px);
-  max-width: 760px;
-  margin: 0 auto;
-}
-
-.est-form { display: grid; row-gap: 20px; }
-
-.form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
-
-.field { display: flex; flex-direction: column; row-gap: 8px; }
-
-.field label {
-  color: var(--ink);
-  font-size: 12px;
-  font-weight: 700;
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
-}
-
-.field input,
-.field textarea {
-  appearance: none;
-  font-family: inherit;
-  border-radius: 12px;
-  border: 1.5px solid var(--line);
-  color: var(--text);
-  font-size: 15px;
-  line-height: 1.5;
-  outline: none;
-  padding: 13px 16px;
-  background: #fff;
-  transition: border-color 0.2s, box-shadow 0.2s;
-}
-
-.field input:focus,
-.field textarea:focus {
-  border-color: var(--leaf-deep);
-  box-shadow: 0 0 0 3px rgba(124,179,66,0.18);
-}
-
-.field ::placeholder { color: #a8aba2; font-size: 14px; }
-
-.field textarea { resize: vertical; min-height: 130px; }
-
-.pill-group { display: flex; gap: 10px; flex-wrap: wrap; }
-
-.pill { cursor: pointer; position: relative; }
-
-.pill input[type="radio"] { position: absolute; opacity: 0; width: 0; height: 0; }
-
-.pill span {
-  display: block;
-  padding: 9px 24px;
-  border: 1.5px solid var(--line);
-  border-radius: 999px;
-  font-size: 14px;
-  font-weight: 600;
-  color: var(--muted);
-  background: #fff;
-  transition: border-color 0.2s, background 0.2s, color 0.2s;
-  user-select: none;
-}
-
-.pill:hover span { border-color: var(--ink); color: var(--ink); }
-
-.pill input[type="radio"]:checked + span {
-  border-color: var(--ink);
-  background: var(--ink);
-  color: #fff;
-}
-
-.form-submit { width: 100%; margin-top: 6px; }
-
-/* ─── FOOTER ─── */
-
-footer {
-  background: var(--ink);
-  color: rgba(255,255,255,0.6);
-  padding: clamp(48px, 6vw, 72px) clamp(20px, 5vw, 56px) 0;
-}
-
-.footer-inner {
-  max-width: 1240px;
-  margin: 0 auto;
-  display: grid;
-  grid-template-columns: 1.6fr 1fr 1fr 1fr;
-  gap: 40px;
-}
-
-.footer-brand img {
-  height: 54px;
-  width: auto;
-  margin-bottom: 18px;
-  filter: brightness(0) invert(1);
-  opacity: 0.92;
-}
-
-.footer-brand p {
-  font-size: 14px;
-  line-height: 1.7;
-  color: rgba(255,255,255,0.5);
-  max-width: 26em;
-  margin-bottom: 18px;
-}
-
-.footer-social { display: flex; gap: 10px; }
-
-.footer-social a {
-  width: 38px;
-  height: 38px;
-  border-radius: 50%;
-  border: 1px solid rgba(255,255,255,0.18);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-decoration: none;
-  color: rgba(255,255,255,0.7);
-  transition: background 0.18s ease, color 0.18s ease, border-color 0.18s ease;
-}
-
-.footer-social a:hover {
-  background: var(--leaf);
-  color: var(--ink);
-  border-color: var(--leaf);
-}
-
-.footer-social svg { width: 16px; height: 16px; }
-
-.footer-col h4 {
-  color: #fff;
-  font-size: 11px;
-  letter-spacing: 0.14em;
-  text-transform: uppercase;
-  font-weight: 700;
-  margin-bottom: 16px;
-  font-family: 'Hanken Grotesk', sans-serif;
-}
-
-.footer-col .col-links { display: flex; flex-direction: column; gap: 11px; font-size: 14.5px; }
-
-.footer-col .col-links a,
-.footer-col .col-links span {
-  color: rgba(255,255,255,0.55);
-  text-decoration: none;
-  transition: color 0.18s ease;
-}
-
-.footer-col .col-links a:hover { color: var(--leaf); }
-
-.footer-col .col-links a.phone { color: var(--leaf); font-weight: 700; }
-
-.footer-bottom {
-  max-width: 1240px;
-  margin: 48px auto 0;
-  padding: 22px 0;
-  border-top: 1px solid rgba(255,255,255,0.09);
-  font-size: 13px;
-  color: rgba(255,255,255,0.32);
-  text-align: center;
-}
-
-/* ─── MOBILE CTA BAR ─── */
-
-.mobile-bar { display: none; }
-
-/* ─── SCROLL REVEAL ─── */
-
-[data-reveal] {
-  opacity: 0;
-  transform: translateY(26px);
-  transition: opacity 0.6s ease, transform 0.6s ease;
-}
-
-[data-reveal].is-visible { opacity: 1; transform: none; }
-
-@media (prefers-reduced-motion: reduce) {
-  html { scroll-behavior: auto; }
-  [data-reveal] { opacity: 1 !important; transform: none !important; transition: none !important; }
-  .hero-copy > *, .hero-media { animation: none; }
-}
-
-/* ─── RESPONSIVE ─── */
-
-@media (max-width: 1000px) {
-  .nav-phone { display: none; }
-}
-
-@media (max-width: 960px) {
-  .hero { grid-template-columns: 1fr; }
-  .hero-photo { aspect-ratio: 4 / 3; }
-  .hero-badge { left: 14px; bottom: 20px; }
-
-  .services-grid { grid-template-columns: 1fr 1fr; }
-  .reviews-grid { grid-template-columns: 1fr; max-width: 620px; margin: 0 auto; }
-
-  .work-grid { grid-template-columns: repeat(2, 1fr); grid-auto-rows: 170px; }
-
-  .band-grid { grid-template-columns: 1fr; }
-  .band-photo { min-height: 260px; }
-
-  .footer-inner { grid-template-columns: 1fr 1fr; }
-}
-
-@media (max-width: 768px) {
-  .nav-toggle { display: flex; }
-
-  .nav-links {
-    display: none;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    right: 0;
-    flex-direction: column;
-    align-items: stretch;
-    gap: 0;
-    background: var(--bone);
-    border-bottom: 1px solid var(--line);
-    box-shadow: 0 16px 30px rgba(20,39,27,0.10);
-    padding: 6px 0 10px;
-  }
-
-  .nav-links.open { display: flex; }
-
-  .nav-links a {
-    padding: 14px clamp(20px, 5vw, 56px);
-    font-size: 15.5px;
-    border-top: 1px solid var(--line);
-  }
-
-  .nav-links a:first-child { border-top: none; }
-
-  .hero-actions .btn { width: 100%; max-width: 320px; text-align: center; }
-
-  .trust-grid { grid-template-columns: 1fr 1fr; }
-  .trust-item + .trust-item { border-left: none; }
-  .trust-item:nth-child(even) { border-left: 1px solid var(--line); }
-  .trust-item:nth-child(n+3) { border-top: 1px solid var(--line); }
-
-  .mobile-bar {
-    display: flex;
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    z-index: 200;
-    box-shadow: 0 -2px 16px rgba(20,39,27,0.22);
-  }
-
-  .mobile-bar a {
-    flex: 1;
-    text-align: center;
-    padding: 16px 8px;
-    font-size: 14px;
-    font-weight: 700;
-    text-decoration: none;
-    letter-spacing: 0.02em;
-  }
-
-  .mobile-bar-call {
-    background: var(--forest);
-    color: #fff;
-    border-right: 1px solid rgba(255,255,255,0.15);
-  }
-
-  .mobile-bar-estimate { background: var(--leaf); color: var(--ink); }
-
-  body { padding-bottom: 56px; }
-}
-
-@media (max-width: 620px) {
-  .services-grid { grid-template-columns: 1fr; }
-  .form-row { grid-template-columns: 1fr; }
-  .footer-inner { grid-template-columns: 1fr; gap: 32px; }
-  .work-grid { grid-auto-rows: 140px; }
-
-  /* Keep the hero headline comfortable on small phones */
-  .hero h1 { font-size: clamp(32px, 9vw, 40px); }
-
-  /* Full-width, consistent CTAs on phones — hero and band match */
-  .hero-actions .btn { width: 100%; max-width: none; }
-  .band-actions { width: 100%; }
-  .band-actions .btn { flex: 1 1 100%; text-align: center; }
-}
-
-@media (max-width: 520px) {
-  .nav-cta { display: none; }
-  nav { gap: 16px; }
-
-  /* Stop the eyebrow pill from wrapping/overflowing */
-  .hero-pill { padding: 6px 13px; }
-  .hero-pill span { font-size: 10.5px; letter-spacing: 0.08em; }
-
-  /* Slightly tighten section rhythm so the page doesn't feel sparse */
-  .section { padding: 56px 0; }
-  .band-section { padding-bottom: 56px; }
-}
-</style>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/ol@10.3.1/ol.css">
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
@@ -872,6 +38,7 @@ footer {
         <div class="nav-links">
             <a href="#work">Work</a>
             <a href="#services">Services</a>
+            <a href="#areas">Areas</a>
             <a href="#reviews">Reviews</a>
             <a href="#about">About</a>
         </div>
@@ -1097,6 +264,46 @@ footer {
         </div>
     </section>
 
+    <!-- ===== SERVICE AREA MAP ===== -->
+    <section id="areas" class="areas section">
+        <div class="wrap">
+            <div class="areas-grid">
+                <div class="areas-copy">
+                    <div class="eyebrow">Where we work</div>
+                    <h2 class="h2">Local to the Greater Joliet area.</h2>
+                    <p>We're your neighbors — based right here and on the road across Will County and the south suburbs every day. Find your town on the map, and if you don't see it, just ask. We travel for the right project.</p>
+                    <div class="areas-list">
+                        <button type="button" class="area-chip" data-town="Joliet">Joliet</button>
+                        <button type="button" class="area-chip" data-town="Plainfield">Plainfield</button>
+                        <button type="button" class="area-chip" data-town="Shorewood">Shorewood</button>
+                        <button type="button" class="area-chip" data-town="Crest Hill">Crest Hill</button>
+                        <button type="button" class="area-chip" data-town="Lockport">Lockport</button>
+                        <button type="button" class="area-chip" data-town="Romeoville">Romeoville</button>
+                        <button type="button" class="area-chip" data-town="Bolingbrook">Bolingbrook</button>
+                        <button type="button" class="area-chip" data-town="New Lenox">New Lenox</button>
+                        <button type="button" class="area-chip" data-town="Mokena">Mokena</button>
+                        <button type="button" class="area-chip" data-town="Frankfort">Frankfort</button>
+                        <button type="button" class="area-chip" data-town="Channahon">Channahon</button>
+                        <button type="button" class="area-chip" data-town="Minooka">Minooka</button>
+                    </div>
+                    <div class="areas-note">
+                        <span class="areas-dot"></span>
+                        Not sure if you're in range? <a href="#estimate">Ask for a free estimate &rarr;</a>
+                    </div>
+                </div>
+                <figure class="areas-map-wrap">
+                    <div id="service-map" class="areas-map" role="application" aria-label="Interactive map of Real-Fresh Landscaping's service area across the Greater Joliet area. Pan and zoom to explore the towns we serve.">
+                        <img class="areas-map-fallback" loading="lazy" src="Pictures/service-area-map.jpg" width="1600" height="1601" alt="Map of the Greater Joliet area showing Real-Fresh Landscaping's service coverage, including Joliet, Plainfield, Shorewood, Crest Hill, Lockport, Romeoville, Bolingbrook, New Lenox, Mokena, Frankfort, Channahon, and Minooka.">
+                        <div id="map-popup" class="map-popup" role="status" aria-live="polite"></div>
+                    </div>
+                    <figcaption class="areas-map-legend">
+                        <span class="legend-swatch"></span> Our service area
+                    </figcaption>
+                </figure>
+            </div>
+        </div>
+    </section>
+
     <!-- ===== ABOUT / CTA BAND ===== -->
     <section id="about" class="band-section">
         <div class="band">
@@ -1275,6 +482,130 @@ footer {
                 revealObserver.observe(el);
             });
         });
+    </script>
+
+    <!-- ── Interactive service-area map (OpenLayers + OpenStreetMap, no API key) ── -->
+    <script src="https://cdn.jsdelivr.net/npm/ol@10.3.1/dist/ol.js" defer></script>
+    <script>
+      window.addEventListener('load', () => {
+        const el = document.getElementById('service-map');
+        if (!el || typeof ol === 'undefined') return;
+
+        const fromLonLat = ol.proj.fromLonLat;
+        const HQ = [-88.0817, 41.5250]; // Joliet, IL [lon, lat]
+
+        const towns = [
+            { name: 'Joliet',      lon: -88.0817, lat: 41.5250, hub: true },
+            { name: 'Plainfield',  lon: -88.2073, lat: 41.6270 },
+            { name: 'Shorewood',   lon: -88.2010, lat: 41.5203 },
+            { name: 'Crest Hill',  lon: -88.0987, lat: 41.5545 },
+            { name: 'Lockport',    lon: -88.0578, lat: 41.5895 },
+            { name: 'Romeoville',  lon: -88.0895, lat: 41.6475 },
+            { name: 'Bolingbrook', lon: -88.0684, lat: 41.6986 },
+            { name: 'New Lenox',   lon: -87.9656, lat: 41.5122 },
+            { name: 'Mokena',      lon: -87.8892, lat: 41.5261 },
+            { name: 'Frankfort',   lon: -87.8487, lat: 41.4959 },
+            { name: 'Channahon',   lon: -88.2287, lat: 41.4295 },
+            { name: 'Minooka',     lon: -88.2617, lat: 41.4553 },
+        ];
+
+        // Base map — CARTO Positron (OpenStreetMap data), light to match the site
+        const base = new ol.layer.Tile({
+            source: new ol.source.XYZ({
+                urls: ['a', 'b', 'c', 'd'].map(s =>
+                    `https://${s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}@2x.png`),
+                attributions: '© <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> © <a href="https://carto.com/attributions">CARTO</a>',
+                tilePixelRatio: 2,
+                maxZoom: 19,
+            }),
+        });
+
+        // Coverage circle (~17 mi). EPSG:3857 units stretch by 1/cos(lat).
+        const radius3857 = 28000 / Math.cos(HQ[1] * Math.PI / 180);
+        const coverage = new ol.Feature(new ol.geom.Circle(fromLonLat(HQ), radius3857));
+        coverage.setStyle(new ol.style.Style({
+            fill: new ol.style.Fill({ color: 'rgba(124,179,66,0.15)' }),
+            stroke: new ol.style.Stroke({ color: '#5d8a2e', width: 2 }),
+        }));
+        const coverageLayer = new ol.layer.Vector({ source: new ol.source.Vector({ features: [coverage] }) });
+
+        const townStyle = (name, hub) => new ol.style.Style({
+            image: new ol.style.Circle({
+                radius: hub ? 8 : 6,
+                fill: new ol.style.Fill({ color: hub ? '#1f3d2b' : '#5d8a2e' }),
+                stroke: new ol.style.Stroke({ color: '#ffffff', width: 2 }),
+            }),
+            text: new ol.style.Text({
+                text: name,
+                font: `700 ${hub ? 14 : 12.5}px 'Bricolage Grotesque', sans-serif`,
+                offsetY: hub ? -18 : -15,
+                fill: new ol.style.Fill({ color: '#14271b' }),
+                stroke: new ol.style.Stroke({ color: 'rgba(255,255,255,0.92)', width: 3 }),
+            }),
+        });
+
+        const byName = {};
+        const townFeatures = towns.map(t => {
+            const f = new ol.Feature({
+                geometry: new ol.geom.Point(fromLonLat([t.lon, t.lat])),
+                name: t.name, hub: !!t.hub,
+            });
+            f.setStyle(townStyle(t.name, t.hub));
+            byName[t.name] = f;
+            return f;
+        });
+        const townLayer = new ol.layer.Vector({ source: new ol.source.Vector({ features: townFeatures }) });
+
+        const map = new ol.Map({
+            target: el,
+            layers: [base, coverageLayer, townLayer],
+            view: new ol.View({ center: fromLonLat(HQ), zoom: 10 }),
+        });
+
+        // Frame the whole coverage area once the map has a size
+        map.once('postrender', () => {
+            map.getView().fit(coverageLayer.getSource().getExtent(),
+                { padding: [24, 24, 24, 24], maxZoom: 12, duration: 0 });
+        });
+        map.once('rendercomplete', () => el.classList.add('is-ready'));
+
+        // Don't hijack page scroll: enable wheel zoom only after the user clicks in
+        let wheel;
+        map.getInteractions().forEach(i => { if (i instanceof ol.interaction.MouseWheelZoom) wheel = i; });
+        if (wheel) {
+            wheel.setActive(false);
+            el.addEventListener('click', () => wheel.setActive(true));
+            el.addEventListener('pointerleave', () => wheel.setActive(false));
+        }
+
+        // Popup
+        const popupEl = document.getElementById('map-popup');
+        const overlay = new ol.Overlay({ element: popupEl, offset: [0, -16], positioning: 'bottom-center', stopEvent: false });
+        map.addOverlay(overlay);
+        const showPopup = (f) => {
+            overlay.setPosition(f.getGeometry().getCoordinates());
+            popupEl.innerHTML = `<strong>${f.get('name')}, IL</strong><span>We service this area.</span>`;
+            popupEl.classList.add('show');
+        };
+
+        map.on('click', (e) => {
+            const f = map.forEachFeatureAtPixel(e.pixel, ft => ft.get('name') ? ft : null);
+            if (f) showPopup(f); else popupEl.classList.remove('show');
+        });
+        map.on('pointermove', (e) => {
+            map.getTargetElement().style.cursor = map.hasFeatureAtPixel(e.pixel) ? 'pointer' : '';
+        });
+
+        // Town chips fly to each town and open its popup
+        document.querySelectorAll('.area-chip').forEach(chip => {
+            chip.addEventListener('click', () => {
+                const f = byName[chip.dataset.town];
+                if (!f) return;
+                map.getView().animate({ center: f.getGeometry().getCoordinates(), zoom: 12, duration: 650 });
+                showPopup(f);
+            });
+        });
+      });
     </script>
 </body>
 </html>
